@@ -1,0 +1,17 @@
+#control {
+    position:absolute;
+    left: 40%;
+}
+#buttons {
+    position:absolute;
+    left: 50%;
+    top: 30%;
+    background-color: bisque;
+    border: 14px;
+    border-color: brown;
+}
+
+button:hover{
+    background-color: salmon;
+}
+

@@ -250,7 +250,7 @@ const pos = [
 
 
 //Array dei nomi di tutte le note in ordine crescente
-const notes = ['C3', 'Db3', 'D3', 'E3b', 'E3', 'F3', 'G3b', 'G3', 'A3b', 'A3', 'B3b', 'B3', 'C4', 'D4b', 'D4', 'E4b', 'E4', 'F4', 'G4b', 'G4', 'A4b', 'A4', 'B4b', 'B4', 'C5', 'D5b', 'D5', 'E5b', 'E5', 'F5', 'G5b', 'G5', 'A5b', 'A5', 'B5b', 'B5', 'C6'];
+const notes = ['C3', 'D3b', 'D3', 'E3b', 'E3', 'F3', 'G3b', 'G3', 'A3b', 'A3', 'B3b', 'B3', 'C4', 'D4b', 'D4', 'E4b', 'E4', 'F4', 'G4b', 'G4', 'A4b', 'A4', 'B4b', 'B4', 'C5', 'D5b', 'D5', 'E5b', 'E5', 'F5', 'G5b', 'G5', 'A5b', 'A5', 'B5b', 'B5', 'C6'];
 
 //Array contente i dizionario che definiscono i trilli per ogni nota DA RIVEDERE!
 const th = [
@@ -260,7 +260,7 @@ const th = [
         'frets2t': null,
         'frets3t': null,
         'frets4t': null,
-        'note1t': 'D3',
+        'note1t': 'D3b',
         'note2t': null,
         'note3t': null,
         'note5t': null,
@@ -848,55 +848,87 @@ for(let element of p){
     i++;
 }
 
+// elementi HTML
+var trillo_button = document.getElementById('trillo');
+var sup1_button = document.getElementById('sup1');
+var sup2_button =  document.getElementById('sup2');
+var inf1_button =  document.getElementById('inf1');
+var inf2_button =  document.getElementById('inf2');
+var ViewBox = document.getElementById("ViewNote");
+var inputValue = document.getElementById("inputValue");
+
 
  //variabili per la definizione del trillo
+var index = 0;
 var isthrill = false;
-var sup1 = false;
+var sup1 = true;
 var sup2 = false;
-var sup3 = false;
-var sup4 = false;
-
+var inf1 = false;
+var inf2 = false;
 var setting = [] //array che definisce cosa deve essere inserito nel vettore delle posizioni
-var notaScelta = 'A';
-var ViewBox = document.getElementById("ViewNote");
+var thrillString = "";
 
+//FUNCTIONS
 
-function run(){
+function run(index, isthrill, sup1, sup2, inf1, inf2){
 
+    
     if (isthrill === true){
-        if(sup1 === false && sup2 === false && sup3 === false && sup4 === false){
+        //ViewBox.value = "the Thrill is ON..:)";
+        /*if(sup1 === false && sup2 === false && sup3 === false && sup4 === false){
             alert('AO SCEGLI UN TRILLO')
-        }else{
-            const randomThrill = c[Math.floor(Math.random()*c.length)];
-            var q = randomThrill.getThrills();
+           sup1 = true;
+        }*/
+        
+        const randomThrill = c[index];
+        var q = randomThrill.getThrills();
+        console.log()
+        var thrill_type_string = "";
 
-            if (sup1 === true){
-                setting = q.positions['sup-1'];
-            }
+        if (sup1 === true){
+            setting = q.positions['sup-1'];
+            thrillString = q["reference-note"] + q["sup-thrill-note1"]; 
+            thrill_type_string = 'sup-1';
+        }
 
-            if (sup2 === true){
-                setting = q.positions['sup-2'];
-            }
-            if (sup3 === true){
-                setting = q.positions['sup-3'];
-            }
-            if (sup4 === true){
-                setting = q.positions['sup-4'];
-            }
+        if (sup2 === true){
+            setting = q.positions['sup-2'];
+            thrillString = q["reference-note"] + q["sup-thrill-note2"]; 
+            thrill_type_string = 'sup-2';
 
         }
+        if (inf1 === true){
+            setting = q.positions['sup-3'];
+            thrillString = q["reference-note"] + q["inf-thrill-note1"]; 
+            thrill_type_string = 'inf-1';
+
+        }
+        if (inf2 === true){
+            setting = q.positions['sup-4'];
+            thrillString = q["reference-note"] + q["inf-thrill-note2"];
+            thrill_type_string = 'inf-2'; 
+
+        }
+
+        ViewBox.value = "the Thrill is ON.. " + thrill_type_string;
+        
     }else{
-        var randomNote = noteNames[Math.floor(Math.random()*noteNames.length)];
+        var randomNote = noteNames[index];
         setting = getPositionFromNote(randomNote, p);
         console.log("randomnote: " + randomNote);
+        console.log("vect: " + setting);
+        thrillString = randomNote; 
+        
         
     }
     //console.log("Posizione " + randomNote + " è " + setKeys);
     
     //GIOBALDO
     //pigiatasti
+
+    ViewBox.value = "hai giannato un " + thrillString;
     
-    names = ['key1','key2','key3','key4','key5','key6','key7','key8','key9','key10','key11','key12','key13','key14','key15'];
+    names = ['key1','key14','key15','key2','key3','key4','key5','key6','key7','key8','key9','key10','key11','key12','key13'];
     
     for (var n=0; n<15; n++){
         const o = document.getElementById(names[n]);
@@ -911,9 +943,12 @@ function run(){
     }
     }
     
-    notaScelta = randomNote; 
-    ViewBox.value = "hai giannato un " + notaScelta;
+    
     ///pigiatasti
+
+    playAudio(thrillString)
+
+    
 
     
 
@@ -923,21 +958,39 @@ function run(){
 //console.log(ChosenNote);
 
 //playnote
-function playAudio(){
+function playAudio(thrillString){
     
     //var FIleName = "Eb3";
-    var FIleName = notaScelta;
+    console.log("da stampare:  " + thrillString);
+    var FIleName = thrillString;
     var AudioPath = "Audio_Stems/Suoni Piffero - "+FIleName+".mp3";
     console.log(AudioPath);
     var Player = document.getElementById("AudioPlayer");
     Player.src= AudioPath;
-    Player.play();
+    //Player.play();
 }
 ///playnote
  //GIOBALDO
-/*
+
+
+
+function initialize(){
+   index = inputValue.value;
+   thrillString = notes[index];
+
+   run(index, isthrill, sup1, sup2, inf1, inf2);
+
+}
+
 function choose(thrill, type, typeString){
     console.log("Napoli")
+    trillo_button.style.backgroundColor = "";
+    sup1_button.style.backgroundColor = "";
+    sup2_button.style.backgroundColor = "";
+    inf1_button.style.backgroundColor = "";
+    inf2_button.style.backgroundColor = "";
+
+
     if(thrill === true){
         isthrill = !isthrill;
     }else{
@@ -948,35 +1001,48 @@ function choose(thrill, type, typeString){
                 if(typeString === "sup1"){
                     sup1 = true;
                     sup2 = false;
-                    sup3 = false;
-                    sup4 = false;
+                    inf1 = false;
+                    inf2 = false;
                 }
                 if(typeString === "sup2"){
                     sup1 = false;
                     sup2 = true;
-                    sup3 = false;
-                    sup4 = false;
+                    inf1 = false;
+                    inf2 = false;
                 }
                 if(typeString === "sup3"){
                     sup1 = false;
                     sup2 = false;
-                    sup3 = true;
-                    sup4 = false;
+                    inf1 = true;
+                    inf2 = false;
                 }
                 if(typeString === "sup4"){
                     sup1 = false;
                     sup2 = false;
-                    sup3 = false;
-                    sup4 = true;
+                    inf1 = false;
+                    inf2 = true;
                 }
             }
         }
     }
     console.log('Sup1: ' + sup1);
     console.log('Sup2: ' + sup2);
-    console.log('Sup3: ' + sup3);
-    console.log('Sup4: ' + sup4);
+    console.log('Sup3: ' + inf1);
+    console.log('Sup4: ' + inf2);
     console.log('Isthrill: ' + isthrill);
 
+    if(isthrill){
+        (trillo_button.style.backgroundColor = "red");
+        if(sup1){sup1_button.style.backgroundColor = "red"};
+        if(sup2){sup2_button.style.backgroundColor = "red"};
+        if(inf1){inf1_button.style.backgroundColor = "red"};
+        if(inf2){inf2_button.style.backgroundColor = "red"};
+    }  
     
-}*/
+    run(index, isthrill, sup1, sup2, inf1, inf2)
+
+
+
+    
+}
+

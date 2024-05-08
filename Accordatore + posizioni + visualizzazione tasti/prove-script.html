@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 
     <style>
         .gianni-button {
@@ -16,25 +17,49 @@
         .fluteContainer {
             position:absolute;
             left: 2%;
+            height: 70%;
         }
+        
     </style>
 
 
 </head>
 <body>
     
-    <button class="gianni-button" onclick="run()">GIANNI</button>
-    <p id="result"></p>
-    
+ 
+     
+    <table id="buttons">
+        <tr>
+            <td><button id="sup1" onclick="choose(false, true, 'sup1')">sup1</button></td>
+            <td><button id="sup2" onclick="choose(false, true, 'sup2')">sup2</button></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button  id="trillo" onclick="choose(true, false, null)">Trillo On/off</button></td>
+        </tr>
+        <tr>
+            <td><button id="inf1" onclick="choose(false, true, 'sup3')">inf1</button></td>
+            <td><button id="inf2" onclick="choose(false, true, 'sup4')">inf2</button></td>
+        </tr>
+    </table>
 
-    <button  id="trillo" onclick="choose(true, false, null)">Trillo On/off</button>
-    <button id="sup1" onclick="choose(false, true, 'sup1')">sup1</button>
-    <button id="sup2" onclick="choose(false, true, 'sup2')">sup2</button>
-    <button id="inf1" onclick="choose(false, true, 'sup3')">inf1</button>
-    <button id="inf2" onclick="choose(false, true, 'sup4')">inf2</button>
-    <button id="playAudio" onclick="playAudio()">PLAY</button>
-    <input type="text" id="ViewNote" readonly>
-    <audio id="AudioPlayer" controls> Audio file not loaded</audio>
+    <table id="control">
+        <tr>
+            <td colspan="3"><input type="number" id="inputValue"></td>
+            <td colspan="1"><button id="useIt" onclick="initialize()">Usa</button></td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <input type="text" id="ViewNote" readonly>
+            </td>
+
+        </tr>
+        <tr>
+            <td colspan="4"><audio id="AudioPlayer" controls> Audio file not loaded</audio></td>
+        </tr>
+    </table>
+    
+    
+    
 
     <div class ="fluteContainer">
         <img id="image" src="flute_vert.png" alt="flute image not loaded: find flute_vert.png and set it in the same folder as index.html" style="position:fixed; z-index: -2;"> 
@@ -46,7 +71,7 @@
                 <circle id="key1" cx="94" cy="283" r="10" stroke="none" fill="none"/> 
                 <circle id="key2" cx="96" cy="347" r="13" stroke="none" fill="none"/>
                 <circle id="key3" cx="105" cy="381" r="13" stroke="none" fill="none"/>
-                <path id="key4" d="M113 396 q10 0 5 -10 q0 -10 6 -13 q5 0 5 12 q-1 7 -9 13 z" stroke="none" fill="none"" ></path>
+                <path id="key4" d="M113 396 q10 0 5 -10 q0 -10 6 -13 q5 0 5 12 q-1 7 -9 13 z" stroke="none" fill="none" ></path>
                 <path id="key5" d="M80 450 l0 15 q10 -3 10 5 q-3 4 -10 2 q-6 -1 -2 -15 z" stroke="none" fill="none"></path>
                 <circle id="key6" cx="96" cy="492" r="13" stroke="none" fill="none"/>
                 <path id="key7" d="M87 508  q10 -0 11 5 q0 4 -10 2 q-10 0 -8 -6 z" stroke="none" fill="none"></path>
