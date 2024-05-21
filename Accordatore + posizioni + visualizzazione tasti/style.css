@@ -1,10 +1,22 @@
+.fluteContainer {
+    position:absolute;
+    left: 2%;
+    height: 70%;
+    z-index: -1;
+}
+.Accordatore {
+    position:absolute;
+    left: 40%;
+    top: 50%;
+    
+}
 #control {
     position:absolute;
     left: 40%;
 }
 #buttons {
     position:absolute;
-    left: 50%;
+    left: 40%;
     top: 30%;
     background-color: bisque;
     border: 14px;
@@ -13,5 +25,51 @@
 
 button:hover{
     background-color: salmon;
+}
+
+#TunerScreen{
+    background-color: aquamarine;
+    border: 5px;
+    border-color: rgb(98, 118, 122);
+    border-style: solid;
+    border-radius: 5%;
+    
+}
+
+#pointer {
+    transform-origin: bottom;
+    
+}
+#t1{
+    transform-origin: bottom;
+    transform: rotate(-40deg);
+}
+#t2{
+    transform-origin: bottom;
+    transform: rotate(-30deg);
+}
+#t3{
+    transform-origin: bottom;
+    transform: rotate(-20deg);
+}
+#t4{
+    transform-origin: bottom;
+    transform: rotate(-10deg);
+}
+#t6{
+    transform-origin: bottom;
+    transform: rotate(10deg);
+}
+#t7{
+    transform-origin: bottom;
+    transform: rotate(20deg);
+}
+#t8{
+    transform-origin: bottom;
+    transform: rotate(30deg);
+}
+#t9{
+    transform-origin: bottom;
+    transform: rotate(40deg);
 }
 

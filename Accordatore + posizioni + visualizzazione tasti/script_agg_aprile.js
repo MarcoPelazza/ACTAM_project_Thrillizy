@@ -996,33 +996,34 @@ function choose(thrill, type, typeString){
     }else{
         if (type === true){
             if(isthrill === false){
-                alert("Activate the thrils button");
-            }else{
-                if(typeString === "sup1"){
-                    sup1 = true;
-                    sup2 = false;
-                    inf1 = false;
-                    inf2 = false;
-                }
-                if(typeString === "sup2"){
-                    sup1 = false;
-                    sup2 = true;
-                    inf1 = false;
-                    inf2 = false;
-                }
-                if(typeString === "sup3"){
-                    sup1 = false;
-                    sup2 = false;
-                    inf1 = true;
-                    inf2 = false;
-                }
-                if(typeString === "sup4"){
-                    sup1 = false;
-                    sup2 = false;
-                    inf1 = false;
-                    inf2 = true;
-                }
+                isthrill=true;
+                //alert("Activate the thrills button");
             }
+            if(typeString === "sup1"){
+                sup1 = true;
+                sup2 = false;
+                inf1 = false;
+                inf2 = false;
+            }
+            if(typeString === "sup2"){
+                sup1 = false;
+                sup2 = true;
+                inf1 = false;
+                inf2 = false;
+            }
+            if(typeString === "sup3"){
+                sup1 = false;
+                sup2 = false;
+                inf1 = true;
+                inf2 = false;
+            }
+            if(typeString === "sup4"){
+                sup1 = false;
+                sup2 = false;
+                inf1 = false;
+                inf2 = true;
+            }
+        
         }
     }
     console.log('Sup1: ' + sup1);

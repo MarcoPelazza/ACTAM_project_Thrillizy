@@ -6,23 +6,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 
-    <style>
-        .gianni-button {
-            position: fixed;
-            bottom: 10px; /* o la distanza desiderata dal fondo della pagina */
-            left: 50%; /* o la posizione desiderata sull'asse x */
-            transform: translateX(-50%); /* per centrare orizzontalmente */
-            z-index: 9999; /* assicurati che il bottone sia sopra tutti gli altri elementi */
-        }
-        .fluteContainer {
-            position:absolute;
-            left: 2%;
-            height: 70%;
-        }
-        
-    </style>
-
-
 </head>
 <body>
     
@@ -86,6 +69,50 @@
             </svg>
         </div>
     </div>
+    <div class="Accordatore">
+        
+        <h1>Accordatore</h1>
+        <table>
+            <tr>
+                <td colspan="2"><button id="initAudioButton" style="width: 160px;"   >Inizializare l'accordatore</button></td>
+            </tr>
+            <tr>
+                <td><input type="text", id="TunerNote" readonly style="width: 70px;"></td>
+                <td><input type="text", id="TunerSet" readonly style="width: 70px;"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="range" min="0" max="200" value="100" id = "freqRange" style="width: 160px;"> </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div>
+                        <svg width="160" height="100" id="TunerScreen" style="z-index: 1; position:fixed" xmlns="http://www.w3.org/2000/svg" preserveAspectratio="xMinYMin">
+                            <path id="t1" d="M80 20 80 5" stroke="grey" stroke-width="2"/>
+                            <path id="t2" d="M80 20 80 5" stroke="grey" stroke-width="2"/>
+                            <path id="t3" d="M80 20 80 5" stroke="grey" stroke-width="2"/>
+                            <path id="t4" d="M80 20 80 5" stroke="grey" stroke-width="2"/>
+                            <path id="t5" d="M80 20 80 5" stroke="grey" stroke-width="2"/>
+                            <path id="t6" d="M80 20 80 5" stroke="grey" stroke-width="2"/>
+                            <path id="t7" d="M80 20 80 5" stroke="grey" stroke-width="2"/>
+                            <path id="t8" d="M80 20 80 5" stroke="grey" stroke-width="2"/>
+                            <path id="t9" d="M80 20 80 5" stroke="grey" stroke-width="2"/>
+                            
+                            <path id="pointer" d="M80 100 80 10" stroke="black" stroke-width="3"/>
+                            <circle cx="80" cy="100" r="7"/>
+                            
+                        </svg>
+                    </div>
+                </td>
+            </tr>
+        </table>
+       
+
+        <div id ='resultDisplay' ></div>
+        
+    </div>
+    
     <script src = 'script_agg_aprile.js'></script>
+    <script src="script_accordatore.js"></script>
+    <script src="yin.js";></script>
 </body>
 </html>
