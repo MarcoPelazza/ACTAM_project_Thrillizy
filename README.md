@@ -1,9 +1,9 @@
-# Sequencer GEN
+# Flute POS
 
-## A Graphic Interface To Create Melodies On The Go
+## A Graphic Interface To Learn How To Play The Transverse Flute
 
-If you want to put on music some ideas in a very simple and fast way, you're at the right place. 
-May you be a musician and you want to share your melody, or may you be a music lover and you want to experiment with notes and rhythms, this website is designed for you.
+If you are starting to approach the world of the transverse flute, whether self-taught or not, you're at the right place. 
+May you be a self-taught musician and you want to learn the right positions of the instrument, or may you be an already trained flutist and often you've difficulty in remembering right positions, expecially for high octaves and trills, this website is designed for you.
 
 This project is the result of a team work for the course _Advanced Coding Tools and Methodologies_ of the M.S. Degree _Music and Acoustic Engineering_ at Politecnico di Milano.
 
