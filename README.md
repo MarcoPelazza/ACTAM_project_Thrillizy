@@ -9,45 +9,28 @@ This project is the result of a team work for the course _Advanced Coding Tools 
 
 ## How Can I Use It?
 
-The graphic interface allows you to insert notes on the staff, giving you the possibility of choosing whether the note is altered or not and then the relative flute position will appear on the display. Moreover, it's also possible to verify if the note played by the flutist is correct or not, through a tuner connected to the microphone.
+The graphic interface allows you to insert notes on the staff, giving you the possibility of choosing whether the note is altered or not and then the relative flute position will appear on the display. Moreover, it's also possible to listen the right sound of that note and verify if the note played by the flutist is correct or not, through a tuner connected to the microphone.
 Here is a quick video tutorial:
 
 <video src="./Video_demo.mp4" controls title="Title"></video
 
 Don't worry, anything shown in the video will be explained below in this page.
 
-### How Can I Write A Melody?
+### Choosing the note 
 
-To start writing a melody you should, firstly, follow these steps:
+The very first step to follow to use this website is to have the flute in hand and a lot of good will. 
+The staff which will appear on the display will allow you to select the note whose position you want to know/remember. The reference adopted for the staff is the treble clef without any key signature: for this reason is therefore possible to choose if the note is altered or not by pressing one of the two buttons respectively corresponding to sharp or flat.
+After this the note will appear on the staff.
+Obviously it will be only possible to choose the notes that are within the range of the transverse flute, therefore from the C3 to the C6.
 
-* Select the desired note by clicking on the buttons related to its musical properties `(letter, octave, alteration, duration)`. For example, to play a C#4 that lasts for one quarter, you want to select `(C, 4, sharp, quarter)`. The order of selection is not relevant in this step and each button will play a note to help you decide what fits better.
-* Select the type of the sound you'd like to hear by clicking on the desired waveform.
-* Add the selected note by clicking on `Add Note`. It will immediately appear on screen, inside the grid. Don't worry if you forget to set some musical attributes, the program will tell you which you are missing.
 
-In this way, you can add the very first note of the melody at the beginning of the grid.
+### Looking at the position
 
-The next note will be added right next to the previous one, to make it faster to compose a single-line melody.\
-If you've just added a note by accident and you want to change it, you can click on `Clean Note` to remove it.\
-In this case, the last note added to the sequence will be deleted and the new note you select will be added starting from where was the removed one.
 
-You can add a pause by selecting `0` as note letter and the desired duration.
-Consider that the pause won't be drawn in the grid.
 
-If you want to add a note in a different position rather than next to the last one, you can choose it by selecting the column number corresponding to where the note should be added (each column represents a 16th) right next to `Note position` and click on the button.
 
-### How Can I Play The Melody?
 
-The first row of buttons offers you different functions (which are, in order):
 
-* play the melody once
-* play it in loop
-* pause reproducing
-* resume playing
-* clean the melody
-
-In order to actually hear sounds, it's necessary to have a BPM and a tuning frequency.
-Their default values are 120 and 440.
-You can change their values at will, so that you can hear the same melody with these different parameters.
 
 ### How Can I See The Melody?
 
