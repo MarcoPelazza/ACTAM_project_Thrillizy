@@ -5,6 +5,7 @@ slider = document.getElementById('freqRange');
 var screen = document.getElementById('TunerScreen');
 var setTuner = false;
 var mediaStream;
+var windowWidth;
 /*slider.addEventListener("input", function() {
     pointer.style.transform = "rotate(" + ((slider.value)*0.5 - 50) + "deg)";
     console.log(slider.value);
@@ -29,34 +30,11 @@ document.addEventListener('DOMContentLoaded', () => {
     
 
     const initAudioButton = document.getElementById('initAudioButton')
-    const trillo_button = document.getElementById("trillo")
+    //const trillo_button = document.getElementById("trillo")
     initAudioButton.addEventListener('click', tunerStartStop); //click singolo o casino
-    initAudioButton.addEventListener('click', tunerStartStop);
+    //initAudioButton.addEventListener('click', tunerStartStop);
    
     
-    function tunerStartStop() {
-        if (!isthrill) {
-            if (!setTuner) {
-                setTuner = true;
-                initAudioContext();
-                initAudioButton.style.backgroundColor = 'red';
-            }
-        }
-        else {
-            if (mediaStream) {
-                mediaStream.getTracks().forEach(track => {
-                    track.stop();
-                });
-                initAudioButton.style.backgroundColor = 'green';
-            }
-            clearInterval(getFrequency);
-            setTuner = false;
-            initAudioButton.style.backgroundColor = '';
-            screen.style.borderColor = '';
-        }
-    }
-
-
     function initAudioContext() {
         let audioContext = new (window.AudioContext || window.webkitAudioContext)();
          //Creazione contesto audio
@@ -132,8 +110,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 }
             }   
-             
-            setInterval(getFrequency,100);
+            console.log('window: ' + windowWidth); 
+            setInterval(getFrequency,windowWidth);
+            
              // this should stop the loop if setTuner is 0
         })
         .catch(error => {
@@ -238,6 +217,29 @@ function handleNoteDifferences(targetNote, frequency, targetNoteIndex){
     return [centDiff, stateString];
 }
 
+function tunerStartStop() {
+    if (!isthrill) {
+        if (!setTuner) {
+            setTuner = true;
+            windowWidth = 100;
+            initAudioContext();
+            initAudioButton.style.backgroundColor = 'red';
+        }
+    }
+    else {
+        if (mediaStream) {
+            mediaStream.getTracks().forEach(track => {
+                track.stop();
+            });
+            initAudioButton.style.backgroundColor = 'green';
+            window = null;
+            clearInterval(getFrequency);
+            setTuner = false;
+            initAudioButton.style.backgroundColor = '';
+            screen.style.borderColor = '';
+        }
+    }
+}
 
 // Convert decimal RGB values to hexadecimal notation
 function getColor(makeColor){

@@ -1026,24 +1026,25 @@ function choose(thrill, type, typeString){
         
         }
     }
-    console.log('Sup1: ' + sup1);
-    console.log('Sup2: ' + sup2);
-    console.log('Sup3: ' + inf1);
-    console.log('Sup4: ' + inf2);
-    console.log('Isthrill: ' + isthrill);
+    //console.log('Sup1: ' + sup1);
+    //console.log('Sup2: ' + sup2);
+    //console.log('Sup3: ' + inf1);
+    //console.log('Sup4: ' + inf2);
+    //console.log('Isthrill: ' + isthrill);
 
     if(isthrill){
         (trillo_button.style.backgroundColor = "red");
+        
         if(sup1){sup1_button.style.backgroundColor = "red"};
         if(sup2){sup2_button.style.backgroundColor = "red"};
         if(inf1){inf1_button.style.backgroundColor = "red"};
         if(inf2){inf2_button.style.backgroundColor = "red"};
+        
     }  
     
     run(index, isthrill, sup1, sup2, inf1, inf2)
 
-
-
+    tunerStartStop('thrill');
     
 }
 

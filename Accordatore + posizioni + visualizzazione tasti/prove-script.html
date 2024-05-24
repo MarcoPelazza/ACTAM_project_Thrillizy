@@ -28,7 +28,7 @@
     <table id="control">
         <tr>
             <td colspan="3"><input type="number" id="inputValue"></td>
-            <td colspan="1"><button id="useIt" onclick="initialize()">Usa</button></td>
+            <td colspan="1"><button id="useIt" onclick="initialize(); tunerStartStop('usa')">Usa</button></td>
         </tr>
         <tr>
             <td colspan="4">
@@ -74,7 +74,7 @@
         <h1>Accordatore</h1>
         <table>
             <tr>
-                <td colspan="2"><button id="initAudioButton" style="width: 160px;"   >Inizializare l'accordatore</button></td>
+                <td colspan="2"><button id="initAudioButton" style="width: 160px;"   onclick="tunerStartStop('tuner')">Inizializare l'accordatore</button></td>
             </tr>
             <tr>
                 <td><input type="text", id="TunerNote" readonly style="width: 70px;"></td>
@@ -112,7 +112,7 @@
     </div>
     
     <script src = 'script_agg_aprile.js'></script>
-    <script src="script_accordatore.js"></script>
+    <script src="script_accordatore copy.js"></script>
     <script src="yin.js";></script>
 </body>
 </html>
