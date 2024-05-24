@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+        .pentagramma {
+            stroke: black;
+            stroke-width: 1;
+        }
+        .note {
+            fill: black;
+        }
+        .accidental {
+            fill: black;
+            font-size: 30px;
+            text-anchor: end;
+            border: black;
+        }
+        .ledger-line-temporary {
+            stroke: #888; /* Colore temporaneo per i tagli addizionali */
+            stroke-width: 1;
+        }
+        .ledger-line-permanent {
+            stroke: black;
+            stroke-width: 1;
+        }
+        .button-container {
+            margin-top: 20px;
+            display: flex; /* Assicurati che i pulsanti siano in una riga */
+    }
+        button {
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+            height: 60px; /* Imposta l'altezza uguale per entrambi i pulsanti */
+            line-height: 30px; /* Allinea verticalmente il testo */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #notaVisualizzata {
+            margin-top: 20px;
+            font-size: 30px;
+            font-weight: bold;
+            font-family: 'Georgia', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <svg width="300" height="290" id="pentagramma"></svg>
+        <div class="button-container">
+            <button id="diesisButton">♯</button>
+            <button id="bemolleButton">♭</button>
+        </div>
+        <div id="notaVisualizzata">Nota: </div>
+    <script src="script.js"></script>
+</body>
+</html>
