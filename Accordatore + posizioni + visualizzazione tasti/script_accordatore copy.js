@@ -1,14 +1,32 @@
 tunerNote = document.getElementById('TunerNote');
-tunerSet = document.getElementById('TunerSet');
 var pointer = document.getElementById('pointer');
 slider = document.getElementById('freqRange');
 var screen = document.getElementById('TunerScreen');
 var setTuner = false;
 var tunerSwitch = true;
 var mediaStream;
-let audiocontenxt;
+let audioContext;
 let frequencyInterval;
 const windowWidth_value = 100;
+const initAudioButton = document.getElementById('initAudioButton')
+toggle = false;
+initAudioButton.src = 'toggle_switch_on.jpg';
+
+initAudioButton.addEventListener('click', tunerStartStop('tuner'));
+/*initAudioButton.addEventListener('click',function() {
+    if (!toggle) {
+        toggle = true;
+        console.log('Switch is ON');
+        initAudioButton.src = 'toggle_switch_on.jpg';
+
+        // Add your logic for when the switch is ON
+    } else {
+        toggle = false;
+        console.log('Switch is OFF');
+        initAudioButton.src = 'toggle_switch_off.jpg';
+        // Add your logic for when the switch is OFF
+    }
+}); */
 
 //const inputFrequency = document.getElementById('inputFrequency');
 const resultDisplay = document.getElementById('result');
@@ -16,7 +34,7 @@ const resultDisplay = document.getElementById('result');
 
 
 
-const initAudioButton = document.getElementById('initAudioButton')
+
 //const trillo_button = document.getElementById("trillo")
 //initAudioButton.addEventListener('click', tunerStartStop); //click singolo o casino
 //initAudioButton.onclick();
@@ -50,9 +68,7 @@ function initAudioContext() {
         var targetNoteIndex = index;
         var targetNote = frequencyToNoteDB[targetNoteIndex];
         tunerNote.value = targetNote;
-        if(isthrill){tunerSet.value = 'Trillo Attivo';}else{
-            tunerSet.value = 'pronto';
-        }    
+          
 
         
 
@@ -215,14 +231,14 @@ function tunerStartStop(call = ''){
         if(!isthrill){
             if(!tunerSwitch){
                 tunerSwitch=true;
-                initAudioButton.style.backgroundColor = 'red';
+                initAudioButton.src='toggle_switch_on.jpg';
                 windowWidth = windowWidth_value;
                 setTuner = true;
                 initAudioContext();
                 console.log('attiva tuner');
             }else{
                 tunerSwitch=false;
-                initAudioButton.style.backgroundColor = '';
+                initAudioButton.src='toggle_switch_off.jpg';
                 windowWidth = null;
                 setTuner = false;
                 stopAudioContext();
@@ -231,7 +247,7 @@ function tunerStartStop(call = ''){
         }
     }
     if(call==='thrill'){
-        if(isthrill && tunerSwitch){
+        if(isthrill && tunerSwitch && mediaStream){
             windowWidth = null;
             setTuner = false;
             stopAudioContext();
@@ -264,73 +280,7 @@ function stopAudioContext() {
         console.log('audioContext = '+ audioContext);
     }
 }
-/*function tunerStartStop(call = '') {
-    if(call==='tuner'){
-        if((!isthrill)*(!setTuner)){
-            setTuner = true;
-            isthrill = false;
-            console.log('tuner asked to activate tuner' + setTuner + isthrill);
-        }
-        if((isthrill)*(!setTuner)){
-            setTuner = false;
-            isthrill = true;
-            console.log('tuner asked to activate tuner but isThrill is on' + setTuner + isthrill);
-        }
-        if((!isthrill)*(setTuner)){
-            setTuner = false;
-            isthrill = false;
-            console.log('tuner asked to deactivate tuner' + setTuner + isthrill);
-        }
-        if((isthrill)*(setTuner)){
-            setTuner = false;
-            isthrill = true;
-            console.log('this should not happen' + setTuner + isthrill);
-        }
-    }
 
-    if(call==='thrill'){
-        if((!isthrill)*(!setTuner)){
-            setTuner = false;
-            isthrill = true;
-            console.log('thrill asked to activate thrill' + setTuner + isthrill);
-        }
-        if((isthrill)*(!setTuner)){
-            setTuner = false;
-            isthrill = true;
-            console.log('tuner asked to activate tuner but isThrill is on' + setTuner + isthrill);
-        }
-        if((!isthrill)*(setTuner)){
-            setTuner = false;
-            isthrill = false;
-            console.log('tuner asked to deactivate tuner' + setTuner + isthrill);
-        }
-        if((isthrill)*(setTuner)){
-            setTuner = false;
-            isthrill = true;
-            console.log('this should not happen' + setTuner + isthrill);
-        }
-    }
-
-    if (!isthrill) {
-        if (!setTuner) {
-            setTuner = true;
-            initAudioContext();
-            initAudioButton.style.backgroundColor = 'red';
-        }
-    }
-    else {
-        if (mediaStream) {
-            mediaStream.getTracks().forEach(track => {
-                track.stop();
-            });
-            initAudioButton.style.backgroundColor = 'green';
-        }
-        clearInterval(getFrequency);
-        setTuner = false;
-        initAudioButton.style.backgroundColor = '';
-        screen.style.borderColor = '';
-    }
-}*/
 
 // Convert decimal RGB values to hexadecimal notation
 function getColor(makeColor){
@@ -354,4 +304,10 @@ function changeOpacity( value = '' ) {
     elements.forEach(element => {
         element.style.opacity = value; // Cambia il valore di opacità desiderato
     });
+}
+
+function graphicTunerSwitch(value){
+    if(value){
+
+    }
 }

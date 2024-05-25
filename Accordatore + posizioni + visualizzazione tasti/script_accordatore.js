@@ -35,6 +35,31 @@ document.addEventListener('DOMContentLoaded', () => {
     //initAudioButton.addEventListener('click', tunerStartStop);
    
     
+    function tunerStartStop() {
+        if (!isthrill) {
+            if (!setTuner) {
+                setTuner = true;
+                windowWidth = 100;
+                initAudioContext();
+                initAudioButton.style.backgroundColor = 'red';
+            }
+        }
+        else {
+            if (mediaStream) {
+                mediaStream.getTracks().forEach(track => {
+                    track.stop();
+                });
+                initAudioButton.style.backgroundColor = 'green';
+                window = null;
+                clearInterval(getFrequency);
+                setTuner = false;
+                initAudioButton.style.backgroundColor = '';
+                screen.style.borderColor = '';
+            }
+        }
+    }
+
+
     function initAudioContext() {
         let audioContext = new (window.AudioContext || window.webkitAudioContext)();
          //Creazione contesto audio
@@ -217,29 +242,6 @@ function handleNoteDifferences(targetNote, frequency, targetNoteIndex){
     return [centDiff, stateString];
 }
 
-function tunerStartStop() {
-    if (!isthrill) {
-        if (!setTuner) {
-            setTuner = true;
-            windowWidth = 100;
-            initAudioContext();
-            initAudioButton.style.backgroundColor = 'red';
-        }
-    }
-    else {
-        if (mediaStream) {
-            mediaStream.getTracks().forEach(track => {
-                track.stop();
-            });
-            initAudioButton.style.backgroundColor = 'green';
-            window = null;
-            clearInterval(getFrequency);
-            setTuner = false;
-            initAudioButton.style.backgroundColor = '';
-            screen.style.borderColor = '';
-        }
-    }
-}
 
 // Convert decimal RGB values to hexadecimal notation
 function getColor(makeColor){

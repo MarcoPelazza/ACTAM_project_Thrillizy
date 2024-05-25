@@ -1,3 +1,4 @@
+var NotaDefinitiva;
 document.addEventListener("DOMContentLoaded", function() {
     const svg = document.getElementById('pentagramma');
     let nota = null;
@@ -89,6 +90,7 @@ document.addEventListener("DOMContentLoaded", function() {
         svg.appendChild(nota);
 
         let notaMusicale = noteMap[y] || 'Unknown'; // Recupera la nota associata alla posizione Y
+        NotaDefinitiva = notaMusicale
 
  
 
@@ -117,11 +119,16 @@ document.addEventListener("DOMContentLoaded", function() {
                     svg.appendChild(simboloAccidentale);
                 }
             }
-            console.log(conversion(notaMusicale));
+            NotaDefinitiva = conversion(notaMusicale)
+            
         }
 
         // Mostra la nota musicale sullo schermo
-        document.getElementById('notaVisualizzata').textContent = 'Nota: ' + notaMusicale;
+        
+        document.getElementById('notaVisualizzata').
+        textContent = 'Nota: ' + NotaDefinitiva;
+        console.log('Nota definitiva:  '+ NotaDefinitiva);
+        window.startProcessing(NotaDefinitiva);
 
         // Aggiungi tagli addizionali permanenti
         aggiungiTagliAddizionaliPermanenti(y);
@@ -301,5 +308,6 @@ function conversion(notaMusicale){
         console.log(notaMusicale.includes('♭'));
         conversion = notaMusicale[0] + notaMusicale[1] + 'b';
     }
+    
     return conversion;
 }

@@ -1,40 +1,92 @@
-.fluteContainer {
-    position:absolute;
-    left: 2%;
-    height: 70%;
-    z-index: -1;
+#main-page{
+    border-color: black;
+    width: 100%;
+    height: 98%;
+    position: fixed;
+    top: 0%;
+    left: 0%;        
 }
-.Accordatore {
+td{
+    position: relative;
+ 
+}
+
+.fluteContainer{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+
+.pentagrammaContainer{
+    position: absolute;
+    top: 5%;
+}
+
+#buttons{
+    position: absolute;
+    left: 20%;
+    top: 10%;
+}
+
+.Accordatore{
+    position: absolute;
+    top: 0%;
+    left: 10%;
+    
+    
+
+}
+#TunerNote{
     position:absolute;
-    left: 40%;
-    top: 50%;
+    bottom: 12%;
+    width: 20%;
+    height: 15%;
+    left: 8%;
+    border-radius: 10%;
+}
+#TunerScreen{
+    position:absolute;
+    transform: scale(1.8);
+    left: 25%;
+    bottom: 25%;
+    background-color: aquamarine;
+    border: 3px;
+    border-color: #575454;
+    border-style: solid;
+    border-radius: 5%;
+    z-index: -1;
     
 }
-#control {
-    position:absolute;
-    left: 40%;
-}
-#buttons {
-    position:absolute;
-    left: 40%;
+#AudioPlayer{
+    position: absolute;
     top: 30%;
-    background-color: bisque;
-    border: 14px;
-    border-color: brown;
+    left: 20%;
+}
+#trillo{
+    position: absolute;
+    transform: rotate(90deg);
+    left: 30%;
+
+}
+
+button{
+    width: 70px;
+    height: 70px;
+    border-style:outset;
+    border-width: 7px;
+    border-radius: 10%;
+    border-color: antiquewhite;
+    background-color: antiquewhite;
+    font-family: 'Trebuchet MS', sans-serif;
+    
 }
 
 button:hover{
     background-color: salmon;
+    border-color: salmon;
 }
 
-#TunerScreen{
-    background-color: aquamarine;
-    border: 5px;
-    border-color: rgb(98, 118, 122);
-    border-style: solid;
-    border-radius: 5%;
-    
-}
+
 
 #pointer {
     transform-origin: bottom;
@@ -73,3 +125,54 @@ button:hover{
     transform: rotate(40deg);
 }
 
+
+
+.pentagrammaContainer{
+    position: absolute;
+    
+    
+    height: 200px;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+.pentagramma {
+    stroke: black;
+    stroke-width: 1;
+}
+.note {
+    fill: black;
+}
+.accidental {
+    fill: black;
+    font-size: 30px;
+    text-anchor: end;
+    border: black;
+}
+.ledger-line-temporary {
+    stroke: #888; /* Colore temporaneo per i tagli addizionali */
+    stroke-width: 1;
+}
+.ledger-line-permanent {
+    stroke: black;
+    stroke-width: 1;
+}
+.button-container {
+    position: absolute;
+    top: 15%;
+    left: 2%;
+    display: flex; /* Assicurati che i pulsanti siano in una riga */
+}
+
+#notaVisualizzata {
+    margin-top: 20px;
+    margin-left: 20%;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', sans-serif;
+}

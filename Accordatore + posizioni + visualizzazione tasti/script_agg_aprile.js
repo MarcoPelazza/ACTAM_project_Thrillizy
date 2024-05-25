@@ -850,6 +850,7 @@ for(let element of p){
 
 // elementi HTML
 var trillo_button = document.getElementById('trillo');
+trillo_button.src = 'toggle_switch_off.jpg';
 var sup1_button = document.getElementById('sup1');
 var sup2_button =  document.getElementById('sup2');
 var inf1_button =  document.getElementById('inf1');
@@ -869,6 +870,8 @@ var setting = [] //array che definisce cosa deve essere inserito nel vettore del
 var thrillString = "";
 
 //FUNCTIONS
+
+
 
 function run(index, isthrill, sup1, sup2, inf1, inf2){
 
@@ -910,8 +913,7 @@ function run(index, isthrill, sup1, sup2, inf1, inf2){
 
         }
 
-        ViewBox.value = "the Thrill is ON.. " + thrill_type_string;
-        
+                
     }else{
         var randomNote = noteNames[index];
         setting = getPositionFromNote(randomNote, p);
@@ -926,7 +928,7 @@ function run(index, isthrill, sup1, sup2, inf1, inf2){
     //GIOBALDO
     //pigiatasti
 
-    ViewBox.value = "hai giannato un " + thrillString;
+    //ViewBox.value = "hai giannato un " + thrillString;
     
     names = ['key1','key14','key15','key2','key3','key4','key5','key6','key7','key8','key9','key10','key11','key12','key13'];
     
@@ -974,17 +976,17 @@ function playAudio(thrillString){
 
 
 
-function initialize(){
+/*function initialize(){
    index = inputValue.value;
    thrillString = notes[index];
 
    run(index, isthrill, sup1, sup2, inf1, inf2);
 
-}
+}*/
 
 function choose(thrill, type, typeString){
     console.log("Napoli")
-    trillo_button.style.backgroundColor = "";
+    
     sup1_button.style.backgroundColor = "";
     sup2_button.style.backgroundColor = "";
     inf1_button.style.backgroundColor = "";
@@ -1033,18 +1035,33 @@ function choose(thrill, type, typeString){
     //console.log('Isthrill: ' + isthrill);
 
     if(isthrill){
-        (trillo_button.style.backgroundColor = "red");
+        trillo_button.src='toggle_switch_on.jpg';
         
         if(sup1){sup1_button.style.backgroundColor = "red"};
         if(sup2){sup2_button.style.backgroundColor = "red"};
         if(inf1){inf1_button.style.backgroundColor = "red"};
         if(inf2){inf2_button.style.backgroundColor = "red"};
         
-    }  
+    }else{trillo_button.src='toggle_switch_off.jpg';} 
     
     run(index, isthrill, sup1, sup2, inf1, inf2)
 
     tunerStartStop('thrill');
     
+}
+
+function startProcessing(NoteStringSelected = ''){
+    for(i=0; i<notes.length; i++){
+        if (notes[i]===NoteStringSelected){
+            console.log(notes.length);
+            
+            thrillString = notes[i];
+            index = i;
+            run(index, isthrill, sup1, sup2, inf1, inf2);
+            console.log('index '+index+' identified for note '+notes[index]);
+            tunerStartStop('usa');
+        }
+        
+    }
 }
 
