@@ -850,7 +850,7 @@ for(let element of p){
 
 // elementi HTML
 var trillo_button = document.getElementById('trillo');
-trillo_button.src = 'toggle_switch_off.jpg';
+trillo_button.src = 'toggle_switch_off.png';
 var sup1_button = document.getElementById('sup1');
 var sup2_button =  document.getElementById('sup2');
 var inf1_button =  document.getElementById('inf1');
@@ -1035,14 +1035,14 @@ function choose(thrill, type, typeString){
     //console.log('Isthrill: ' + isthrill);
 
     if(isthrill){
-        trillo_button.src='toggle_switch_on.jpg';
+        trillo_button.src='toggle_switch_on.png';
         
         if(sup1){sup1_button.style.backgroundColor = "red"};
         if(sup2){sup2_button.style.backgroundColor = "red"};
         if(inf1){inf1_button.style.backgroundColor = "red"};
         if(inf2){inf2_button.style.backgroundColor = "red"};
         
-    }else{trillo_button.src='toggle_switch_off.jpg';} 
+    }else{trillo_button.src='toggle_switch_off.png';} 
     
     run(index, isthrill, sup1, sup2, inf1, inf2)
 

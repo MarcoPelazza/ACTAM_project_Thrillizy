@@ -1,3 +1,7 @@
+.container{
+    min-width: 900px;
+    min-height: 600px ;
+}
 #main-page{
     border-color: black;
     background-image: linear-gradient(to right, white, #FDFFFC, #0CA4A5,#0CA4A5, #074F57,#074F57 );
@@ -5,8 +9,9 @@
     height: 100%;
     position: fixed;
     top: 0%;
-    left: 0%; 
-    z-index: -5;       
+    left: 0%;
+
+           
 }
 td{
     position: relative;
@@ -27,7 +32,7 @@ td{
 
 #buttons{
     position: absolute;
-    left: 20%;
+    left: 10%;
     top: 10%;
 }
 
@@ -67,8 +72,9 @@ td{
 }
 #trillo{
     position: absolute;
-    transform: rotate(90deg);
-    left: 30%;
+    transform: rotate(0deg);
+    left: 5%;
+    top:10%;
 
 }
 
@@ -76,8 +82,8 @@ button{
     width: 70px;
     height: 70px;
     border-style:outset;
-    border-width: 7px;
-    border-radius: 10%;
+    border-width:7px;
+    border-radius: 7px;
     border-color: #E3B505;
     background-color: #E3B505;
     font-family: 'Trebuchet MS', sans-serif;

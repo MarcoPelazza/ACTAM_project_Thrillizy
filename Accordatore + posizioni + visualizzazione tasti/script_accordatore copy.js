@@ -10,7 +10,7 @@ let frequencyInterval;
 const windowWidth_value = 100;
 const initAudioButton = document.getElementById('initAudioButton')
 toggle = false;
-initAudioButton.src = 'toggle_switch_on.jpg';
+initAudioButton.src = 'toggle_switch_on.png';
 
 initAudioButton.addEventListener('click', tunerStartStop('tuner'));
 /*initAudioButton.addEventListener('click',function() {
@@ -231,14 +231,14 @@ function tunerStartStop(call = ''){
         if(!isthrill){
             if(!tunerSwitch){
                 tunerSwitch=true;
-                initAudioButton.src='toggle_switch_on.jpg';
+                initAudioButton.src='toggle_switch_on.png';
                 windowWidth = windowWidth_value;
                 setTuner = true;
                 initAudioContext();
                 console.log('attiva tuner');
             }else{
                 tunerSwitch=false;
-                initAudioButton.src='toggle_switch_off.jpg';
+                initAudioButton.src='toggle_switch_off.png';
                 windowWidth = null;
                 setTuner = false;
                 stopAudioContext();
