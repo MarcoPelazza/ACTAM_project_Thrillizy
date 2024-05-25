@@ -1065,3 +1065,6 @@ function startProcessing(NoteStringSelected = ''){
     }
 }
 
+function setButton (button, value){
+    button
+}
