@@ -22,14 +22,26 @@ The very first step to follow to use this website is to have the flute in hand a
 
 The staff which will appear on the display will allow you to select the note whose position you want to know/remember. The reference adopted for the staff is the treble clef without any key signature: for this reason is therefore possible to choose if the note is altered or not by pressing one of the two buttons respectively corresponding to sharp or flat.
 
-After this the note will appear on the staff.
+It's also possibile to select notes below or above the staff, thanks to the ledger lines put as a reference while pointing with the mouse on the staff.
+
+After this the note will appear on the staff with its name.
 Obviously it will be only possible to choose the notes that are within the range of the transverse flute, therefore from the `C3` to the `C6`.
 
 
 ### Looking at the position
 
+Once you've selected the note on the staff, the relative position will appear on the flute picture put on the left side, in particular the keys to press will be seen in black.
+Note that the keys to press with the thumb of the left hand, which are not visible in the view in which the flute has been drawn, are positioned detached from the body of the flute, in correspondence of its real position.
+Now it's time to play!
+### Can I listen to the right position sound?
+Yes. As you can see, there is an audio player and by pressing `Play` 'play'
+### How can I verify if the note I'm playing is correct?
 
 
+
+
+### What about trills?
+### Can I see the trill positions for all the notes?
 
 
 
