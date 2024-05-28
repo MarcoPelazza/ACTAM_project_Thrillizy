@@ -41,7 +41,14 @@ It's also possible to verify the correct execution of the note by using the `Tun
 
 
 ### What about trills?
+The trill is a musical ornament consisting of a rapid alternation between two adjacent notes, usually a semitone or tone apart. 
+On this website a beginner flute can also learn how to play them. 
+The steps to follow are very similar to those of the single note positions. After you've selected the note on the staff you can also select the type of trill to play. For each note it's possible to choose between four different trills: one for a semitone above, one for a tone above, one for a semitone below and one for a tone below.
+The flute picture will show the fixed keys to press in black as usual, while the key which will be moved for the execution of the trill will appear colored in red.
 ### Can I see the trill positions for all the notes?
+Not all the notes allow the execution of trills, this depends on the range of the flute: for instance for the `C3`, which is the lowest note for a transverse flute, it's only possible to execute the two upper trills. For this reason, for the notes that are at the edges of the flute range, not all the trill buttons can be pressed.
+### Can I also check the correct execution of the trills?
+You can obviously listen to the correct execution of each trill, but it's not possible to use the `Tuner` box, as it works only for one note at time, since you will be playing more than one note simultaneously.
 
 
 
