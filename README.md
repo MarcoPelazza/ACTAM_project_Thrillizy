@@ -23,7 +23,7 @@ The very first step to follow to use this website is to have the flute in hand a
 The staff which will appear on the display will allow you to select the note whose position you want to know/remember. The reference adopted for the staff is the treble clef without any key signature: for this reason is therefore possible to choose if the note is altered or not by pressing one of the two buttons respectively corresponding to sharp or flat.
 
 After this the note will appear on the staff.
-Obviously it will be only possible to choose the notes that are within the range of the transverse flute, therefore from the 'C3' to the 'C6'.
+Obviously it will be only possible to choose the notes that are within the range of the transverse flute, therefore from the `C3` to the `C6`.
 
 
 ### Looking at the position
@@ -39,7 +39,7 @@ Obviously it will be only possible to choose the notes that are within the range
 All notes added will be drawn inside the grid with the keyboard.
 At first, all 7 octaves available can be seen, but you can choose how many octaves you want to display.
 By choosing the first and last octaves, you can see the part of your melody that belongs to that range.\
-For example, if you want to display from octave `3` to octave `5`, you should select 3 and 5 for first and last octave (respectively) and the grid will update automatically.
+For example, if you want to display from octave `C3` to octave `5`, you should select 3 and 5 for first and last octave (respectively) and the grid will update automatically.
 
 In addition to that, you can change the number of bars displayed with the same logic.
 At first, only one bar is displayed, but more bars can be shown by typing the desired number of bars next to `Number of bars`.
