@@ -36,7 +36,7 @@ And that's it!
 You're done!
 Now it's time to play!
 ### Can I listen to the right position sound?
-Yes. As you can see, there is an audio player and by pressing `Play` you will hear the correct sound played by the fantastica Angelica Cagnetta flute player. She can play flute very well, I swear. Listen if you don't trust. LISTEN!
+Yes. As you can see, there is a radio and by pressing it you will hear the correct sound played by the fantastica Angelica Cagnetta flute player. She can play flute very well, I swear. Listen if you don't trust. LISTEN!
 ### How can I verify if the note I'm playing is correct?
 It's also possible to verify the correct execution of the note by using the `Tuner` box. It requires the access to the microphone and then you can check also the tuning of the sound.
 ### What about trills?
