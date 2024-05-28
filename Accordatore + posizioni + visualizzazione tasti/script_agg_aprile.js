@@ -940,10 +940,9 @@ function run(index, isthrill, sup1, sup2, inf1, inf2){
         }
         
         if(setting === null){
-            setting = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
-            console.log('diobrstia');
+            setting = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];            
         }
-        console.log(setting);        
+                
     }else{
         var randomNote = noteNames[index];
         setting = getPositionFromNote(randomNote, p);

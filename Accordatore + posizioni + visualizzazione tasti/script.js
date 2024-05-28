@@ -125,8 +125,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Mostra la nota musicale sullo schermo
         
-        document.getElementById('notaVisualizzata').
-        textContent = 'Nota: ' + NotaDefinitiva;
+        //document.getElementById('notaVisualizzata').
+        //textContent = 'Nota: ' + NotaDefinitiva;
         console.log('Nota definitiva:  '+ NotaDefinitiva);
         window.startProcessing(NotaDefinitiva);
 

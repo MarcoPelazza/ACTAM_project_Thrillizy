@@ -12,7 +12,7 @@
         <table id="main-page" border="0">
             
             <tr height="15%">
-                <td rowspan="3" id="fluteCell" width="10%" height="100%" style="min-width: 150px; ">
+                <td rowspan="2" id="fluteCell" width="10%" height="100%" style="min-width: 150px; ">
                     <div class ="fluteContainer">
                         <img id="image" src="flute_vert.png" alt="flute image not loaded: find flute_vert.png and set it in the same folder as index.html" style="position:fixed; z-index: 0;"> 
                         
@@ -39,33 +39,39 @@
                         </div>
                     </div>
                 </td>
-                <td rowspan="3" id="transition" width="10%"></td>
+                <td rowspan="2" id="transition" width="10%"></td>
             
             
-                <td colspan="1" rowspan="2" width="20%" style="min-width: 300px;">
+                <td colspan="1" rowspan="1" width="20%" style="min-width: 300px;">
                     <div class="pentagrammaContainer">
-                        <svg width="300" height="290" id="pentagramma"></svg>
-                        
+                        <svg width="300" height="290" id="pentagramma"></svg>                        
                     </div>
                 </td>
-                <td style="min-width: 330px; min-height: 54px;">
-                    <div>
+                <td height="50%">
+                    <table class="button-container" border="1">
+                        <tr>
+                            <td>
+                                <button id="diesisButton">♯</button>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td>
+                                <button id="bemolleButton">♭</button>
+                            </td>
+                        </tr>
+                    </table>
+                    <div id="audioSection">
+                        <img src="sadio.png" height=57% width="auto"></img>
                         <audio id="AudioPlayer"> Audio file not loaded</audio>
                     </div>
                 </td>
             </tr>
-            <tr>
-                <td height="35%" style="min-height: 236px;"><table class="button-container">
-                    <tr><td><button id="diesisButton">♯</button></td>
-                    <td rowspan="2"><td><img src="sadio.png"></td>
-                    <tr><td><button id="bemolleButton">♭</button></td></tr>
-                </table>
-                </td>
-            </tr>
+            
             <tr>
                 <td>
                     <table id="buttons" border="0">
-                        <tr colspan="2" height="10%"></tr>
+                        <tr colspan="1" height="10%"></tr>
                         <tr>
                             <td rowspan="4" width="7%"></td>
                             <td><button id="sup1" onclick="choose(false, true, 'sup1')">SUP1</button></td>

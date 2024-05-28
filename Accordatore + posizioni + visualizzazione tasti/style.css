@@ -40,10 +40,24 @@ td{
     right: 5%;
 }
 
+.button-container{
+    position: absolute;
+    margin-top: 9%;
+    left:0%;
+    border-color: blue;
+}
+
+#audioSection{
+    position:absolute;
+    left:22%;
+    top:5%
+
+}
+
 #buttons{
     position: absolute;
-    left: 15%;
-    top: 0%;
+    left: 10%;
+    top: 5%;
     background-image: url('RADICA-DI-OLMO-90.jpg');
     z-index: 1;
     height: 262px;
@@ -55,8 +69,8 @@ td{
 
 .Accordatore{
     position: absolute;
-    top: 0%;
-    left: 0%;
+    top: 5%;
+    left: 30%;
     background-image: url('RADICA-DI-OLMO.jpg');
     z-index: 1;
     border-radius: 20px;
@@ -93,6 +107,7 @@ td{
     position: absolute;
     top: 30%;
     left: 20%;
+
 }
 #trillo{
     position: absolute;
