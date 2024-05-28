@@ -34,9 +34,9 @@ Once you've selected the note on the staff, the relative position will appear on
 Note that the keys to press with the thumb of the left hand, which are not visible in the view in which the flute has been drawn, are positioned detached from the body of the flute, in correspondence of its real position.
 Now it's time to play!
 ### Can I listen to the right position sound?
-Yes. As you can see, there is an audio player and by pressing `Play` 'play'
+Yes. As you can see, there is an audio player and by pressing `Play` you will hear the correct sound played by the fantastica Angelica Cagnetta flute player. She can play flute very well, I swear. Listen if you don't trust. LISTEN!
 ### How can I verify if the note I'm playing is correct?
-
+It's also possible to verify the correct execution of the note by using the `Tuner` box. It requires the access to the microphone and then you can check also the tuning of the sound.
 
 
 
