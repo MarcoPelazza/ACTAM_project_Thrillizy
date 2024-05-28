@@ -32,14 +32,13 @@ Obviously it will be only possible to choose the notes that are within the range
 
 Once you've selected the note on the staff, the relative position will appear on the flute picture put on the left side, in particular the keys to press will be seen in black.
 Note that the keys to press with the thumb of the left hand, which are not visible in the view in which the flute has been drawn, are positioned detached from the body of the flute, in correspondence of its real position.
+And that's it!
+You're done!
 Now it's time to play!
 ### Can I listen to the right position sound?
 Yes. As you can see, there is an audio player and by pressing `Play` you will hear the correct sound played by the fantastica Angelica Cagnetta flute player. She can play flute very well, I swear. Listen if you don't trust. LISTEN!
 ### How can I verify if the note I'm playing is correct?
 It's also possible to verify the correct execution of the note by using the `Tuner` box. It requires the access to the microphone and then you can check also the tuning of the sound.
-
-
-
 ### What about trills?
 The trill is a musical ornament consisting of a rapid alternation between two adjacent notes, usually a semitone or tone apart. 
 On this website a beginner flute can also learn how to play them. 
@@ -49,64 +48,16 @@ The flute picture will show the fixed keys to press in black as usual, while the
 Not all the notes allow the execution of trills, this depends on the range of the flute: for instance for the `C3`, which is the lowest note for a transverse flute, it's only possible to execute the two upper trills. For this reason, for the notes that are at the edges of the flute range, not all the trill buttons can be pressed.
 ### Can I also check the correct execution of the trills?
 You can obviously listen to the correct execution of each trill, but it's not possible to use the `Tuner` box, as it works only for one note at time, since you will be playing more than one note simultaneously.
-
-
-
-
-### How Can I See The Melody?
-
-All notes added will be drawn inside the grid with the keyboard.
-At first, all 7 octaves available can be seen, but you can choose how many octaves you want to display.
-By choosing the first and last octaves, you can see the part of your melody that belongs to that range.\
-For example, if you want to display from octave `C3` to octave `5`, you should select 3 and 5 for first and last octave (respectively) and the grid will update automatically.
-
-In addition to that, you can change the number of bars displayed with the same logic.
-At first, only one bar is displayed, but more bars can be shown by typing the desired number of bars next to `Number of bars`.
-
-### Can I Add Notes Through The Grid?
-
-In order to make the user experience better, we implemented a method to add the notes immediately on the grid.\
-Each cell of this grid represents a pitch and a time slot, whose time unit is the 16th.
-The keyboard on the left of the grid helps you visualize the pitches.\
-When your cursor is on the grid, you can see that the cell you are on is highlighted in blue.
-This helps you identifying which cell you are on.
-To add a new note on the grid, these steps are required:
-
-* Click on the cell corresponding to the desired pitch at the desired time: this will define the pitch of the new note.
-* To select the desired duration, just click a second time on the grid at the temporal edge of the note.
-
-If you click on the same cell, the note will last for a 16th.
-If you click on any other cell, your note will last for as many 16th as there are cells between the first and second click (included).
-Your note will start at the time-instant indicated by the left cell (i.e. you can add a note from starting to ending point and vice-versa).\
-Be careful, the sequencer is designed such as when a time-slot is already taken by a certain pitch, no overlap is possible: you can't play the same note twice at the same moment.
-
-For example, if you want to add a C which lasts for a quarter, then you have to:
-
-* Identify the cell corresponding to the C on the grid (help yourself with the keyboard).
-* Click on the cell related to the desired time-instant.
-* Click a second time 3 cells further (to the left or to the right).
-
-And that's it!
-You're done!
-The C will start to the time-instant of the left edge and last for a quarter.
-
-### How Can I Save The Melody?
-
-Yes, you can save your melody, by clicking on `Save Melody`.
-Now you can share it with other people, who can load that very same file and rapidly hear (and judge) your ideas on the spot.\
-Be sure to save your progress before loading any file not to lose your melody.
-
-### What About Chords?
-
-You can add chords and, generally, as many notes as you like in whatever position you prefer.
-Remember to choose the starting position of the new notes with `Note position`.
-
 ### Is There Anything Else It Can Do?
 
 > It ain't much, but it's honest work.
 
-## How Does It Work?
 
+
+
+
+## How Does It Work?
+### Diagramma a blocchi
 This project is composed of one HTML file, one CSS file and four JavaScript files:
 
 * `Animations.js`: collects all the functionalities related to visual representations such as leds activation, grid design (through an HTML5 canvas) and melody display.
