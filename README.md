@@ -20,11 +20,11 @@ Don't worry, anything shown in the video will be explained below in this page.
 
 The very first step to follow to use this website is to have the flute in hand and a lot of good will. 
 
-The staff which will appear on the display will allow you to select the note whose position you want to know/remember. The reference adopted for the staff is the treble clef without any key signature: for this reason is therefore possible to choose if the note is altered or not by pressing one of the two buttons respectively corresponding to sharp or flat.
+The staff which will appear on the display will allow you to select the note whose position you want to know/remember. The reference adopted for the staff is the treble clef without any key signature: for this reason is therefore possible to choose if the note is altered or not by pressing one of the two buttons respectively corresponding to sharp `#` or flat `b`.
 
 It's also possibile to select notes below or above the staff, thanks to the ledger lines put as a reference while pointing with the mouse on the staff.
 
-After this the note will appear on the staff with its name.
+After this the note will appear on the staff.
 Obviously it will be only possible to choose the notes that are within the range of the transverse flute, therefore from the `C3` to the `C6`.
 
 
