@@ -9,12 +9,12 @@
 </head>
 <body>
     <div class = 'container'>
-        <table id="main-page" border="1">
+        <table id="main-page" border="0">
             
             <tr height="15%">
-                <td rowspan="3" width="25%" height="100%" style="min-width: 200px; ">
+                <td rowspan="3" id="fluteCell" width="10%" height="100%" style="min-width: 150px; ">
                     <div class ="fluteContainer">
-                        <img id="image" src="flute_vert.png" alt="flute image not loaded: find flute_vert.png and set it in the same folder as index.html" style="position:fixed; z-index: -2;"> 
+                        <img id="image" src="flute_vert.png" alt="flute image not loaded: find flute_vert.png and set it in the same folder as index.html" style="position:fixed; z-index: 0;"> 
                         
                         <div id="fluteKeys">
                             <svg viewBox="0 0 178 849"id="svgKeys" style="z-index: 1; position:fixed" xmlns="http://www.w3.org/2000/svg" preserveAspectratio="xMinYMin">
@@ -39,48 +39,52 @@
                         </div>
                     </div>
                 </td>
-                <!--<th colspan="3" height="60px">SITO DEL PIFFERO</th>-->
+                <td rowspan="3" id="transition" width="10%"></td>
             
             
-                <td colspan="1" rowspan="2" width="20%" style="min-width: 300px; min-height: 290px;">
+                <td colspan="1" rowspan="2" width="20%" style="min-width: 300px;">
                     <div class="pentagrammaContainer">
                         <svg width="300" height="290" id="pentagramma"></svg>
                         
                     </div>
                 </td>
-                <td style="min-width: 300px; min-height: 54px;">
+                <td style="min-width: 330px; min-height: 54px;">
                     <div>
-                        <audio id="AudioPlayer" controls> Audio file not loaded</audio>
+                        <audio id="AudioPlayer"> Audio file not loaded</audio>
                     </div>
                 </td>
             </tr>
             <tr>
-                <td height="35%"><table class="button-container">
+                <td height="35%" style="min-height: 236px;"><table class="button-container">
                     <tr><td><button id="diesisButton">♯</button></td>
-                    <td rowspan="2"><div id="notaVisualizzata">Nota: </div></td></tr>
+                    <td rowspan="2"><td><img src="sadio.png"></td>
                     <tr><td><button id="bemolleButton">♭</button></td></tr>
                 </table>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <table id="buttons" border="1">
+                    <table id="buttons" border="0">
+                        <tr colspan="2" height="10%"></tr>
                         <tr>
+                            <td rowspan="4" width="7%"></td>
                             <td><button id="sup1" onclick="choose(false, true, 'sup1')">SUP1</button></td>
                             <td><button id="sup2" onclick="choose(false, true, 'sup2')">SUP2</button></td>
-                            <td rowspan="2" width="80px"><img  id="trillo" onclick="choose(true, false, null)" style="height: 115px;"></td>
+                            <td rowspan="2" width="100px"><img  id="trillo" onclick="choose(true, false, null)" style="height: 115px;"></td>
+                            
                         </tr>
                         
                         <tr>
                             <td><button id="inf1" onclick="choose(false, true, 'sup3')">INF1</button></td>
                             <td><button id="inf2" onclick="choose(false, true, 'sup4')">INF2</button></td>
                         </tr>
+                        <tr colspan="2" height="10%"></tr>
                        
                     </table>
                 </td>
                 <td colspan="1" style="min-width: 400px;">
                     <div class="Accordatore">     
-                        <table border="1">                       
+                        <table border="0">                       
                             <tr style="height: 250px;">
                                 <td style="min-width: 320px;">
                                     <div>                                  

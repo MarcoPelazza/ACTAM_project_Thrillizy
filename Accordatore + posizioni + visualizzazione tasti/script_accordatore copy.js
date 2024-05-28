@@ -41,7 +41,7 @@ const resultDisplay = document.getElementById('result');
 
 
 function initAudioContext() {
-    changeOpacity( value = '1' );
+    changeScreen( true );
     audioContext = new (window.AudioContext || window.webkitAudioContext)();
         //Creazione contesto audio
         console.log('inizializzazione audiocontenxt');
@@ -100,7 +100,7 @@ function initAudioContext() {
                         //document.getElementById('freqRange').value = value;                       
                         
                     }
-                
+                    tunerNote.style.backgroundColor = getColor(diff[0]);
                 }else{
                     if(diff[1] === 'LOW'){
                         value = -50;
@@ -108,11 +108,11 @@ function initAudioContext() {
                     if(diff[1] === 'HIGH'){
                         value = 50;
                     }
-
+                    tunerNote.style.backgroundColor = '#575454';
                 }
                 console.log('value=  ' + value + ' & diff =  ' + diff);
                 pointer.style.transform = "rotate(" + value + "deg)"; 
-                screen.style.borderColor = getColor(diff[0]);
+                
 
             }
         }   
@@ -262,7 +262,7 @@ function tunerStartStop(call = ''){
 }
 
 function stopAudioContext() {
-    changeOpacity( value = '0.5' );
+    changeScreen( false );
     console.log('stopAudioContext called');
     if (frequencyInterval) {
         clearInterval(frequencyInterval);
@@ -299,15 +299,16 @@ function decimalToHex(decimalValue) {
     return hexValue.length == 1 ? "0" + hexValue : hexValue; // Add leading zero if necessary
 }
 
-function changeOpacity( value = '' ) {
-    const elements = document.querySelectorAll('.Accordatore');
+function changeScreen( value ) {
+    /*const elements = document.querySelectorAll('.Accordatore');
     elements.forEach(element => {
-        element.style.opacity = value; // Cambia il valore di opacità desiderato
-    });
-}
+        if(!element.classList.contains('switch')){
+            element.style.opacity = '1';
+        }
+        element.style.opacity = value; // Cambia il valore di opacità desiderato*/
+        let color ='';
+        if(value){c1='#E3B505'; c2='#888'}else{c1='#888'; c2='#575454';}
+        screen.style='background-image: radial-gradient(farthest-corner at 50% 100%,'+c1+','+c2+')';
+    };
 
-function graphicTunerSwitch(value){
-    if(value){
-
-    }
-}
+    

@@ -1,17 +1,27 @@
 .container{
-    min-width: 900px;
+    min-width: 600px;
     min-height: 600px ;
 }
 #main-page{
-    border-color: black;
-    background-image: linear-gradient(to right, white, #FDFFFC, #0CA4A5,#0CA4A5, #074F57,#074F57 );
+    background-color: #074F57;
+    border-width: 0px;
+    border-collapse: collapse;
     width: 100%;
     height: 100%;
+    min-height: 600px;
+    min-width: 600px;
     position: fixed;
     top: 0%;
     left: 0%;
 
            
+}
+#fluteCell{
+    background-color: white ;
+    border-color: white;
+}
+#transition{
+    background-image: linear-gradient(to right, white,#074F57 );
 }
 td{
     position: relative;
@@ -32,16 +42,29 @@ td{
 
 #buttons{
     position: absolute;
-    left: 10%;
-    top: 10%;
+    left: 15%;
+    top: 0%;
+    background-image: url('RADICA-DI-OLMO-90.jpg');
+    z-index: 1;
+    height: 262px;
+    border-radius: 20px;
+    border-width: 5px;
+    border-style: ridge;
+    border-color: #888;
 }
 
 .Accordatore{
     position: absolute;
     top: 0%;
-    left: 10%;
-    
-    
+    left: 0%;
+    background-image: url('RADICA-DI-OLMO.jpg');
+    z-index: 1;
+    border-radius: 20px;
+    border-width: 5px;
+    border-style: ridge;
+    border-color: #888;
+
+       
 
 }
 #TunerNote{
@@ -57,10 +80,11 @@ td{
     transform: scale(1.8);
     left: 25%;
     bottom: 25%;
-    background-color: aquamarine;
-    border: 3px;
-    border-color: #575454;
-    border-style: solid;
+    background-image: radial-gradient(farthest-corner at 50% 100%,#888, #575454);
+    border-radius: 20px;
+    border-width: 3px;
+    border-style: ridge;
+    border-color: #888;
     border-radius: 5%;
     z-index: -1;
     
@@ -74,7 +98,7 @@ td{
     position: absolute;
     transform: rotate(0deg);
     left: 5%;
-    top:10%;
+    top:15%;
 
 }
 
@@ -86,7 +110,9 @@ button{
     border-radius: 7px;
     border-color: #E3B505;
     background-color: #E3B505;
-    font-family: 'Trebuchet MS', sans-serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #074F57;
+    font-style:italic;
     font-size:large;
     font-weight:bold;
     

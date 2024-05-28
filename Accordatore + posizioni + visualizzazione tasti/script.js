@@ -220,14 +220,17 @@ document.addEventListener("DOMContentLoaded", function() {
         rimuoviTagliAddizionaliTemporanei();
     });
 
-    document.getElementById('diesisButton').addEventListener('click', function() { 
+    var diesisButton = document.getElementById('diesisButton').addEventListener('click', function() { 
         notaAccidentale = '♯';
         bottonePremuto = true;
+        diesisButton.style.backgroundColor  = 'red';
+
     });
 
-    document.getElementById('bemolleButton').addEventListener('click', function() {
+    var bemolleButton = document.getElementById('bemolleButton').addEventListener('click', function() {
         notaAccidentale = '♭';
         bottonePremuto = true;
+        bemolleButton.style.backgroundColor  = 'red';
     });
 
     function mostraTagliAddizionali(y) {

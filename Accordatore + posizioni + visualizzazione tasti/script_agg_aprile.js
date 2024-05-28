@@ -263,7 +263,7 @@ const th = [
         'note1t': 'D3b',
         'note2t': null,
         'note3t': null,
-        'note5t': null,
+        'note4t': null,
         'isalt': false
     },
     {
@@ -882,41 +882,72 @@ function run(index, isthrill, sup1, sup2, inf1, inf2){
             alert('AO SCEGLI UN TRILLO')
            sup1 = true;
         }*/
+        var inf1_exist=true;
+        var inf2_exist=true;
+        var sup1_exist=true;
+        var sup2_exist=true;
+
+        pressButton(sup1_button, sup1);
+        pressButton(sup2_button, sup2);
+        pressButton(inf1_button, inf1);
+        pressButton(inf2_button, inf2);
         
         const randomThrill = c[index];
         var q = randomThrill.getThrills();
-        console.log()
+        setting = null;
+        console.log(q);
+
+        if(q["inf-thrill-note1"] === null ){
+            inf1_exist=false;
+            //console.log('dfkjhdkjhdf'+ inf1_exist);
+            deactivateButton(inf1_button, inf1_exist)}
+        if(q["inf-thrill-note2"] === null){
+            inf2_exist=false;
+            deactivateButton(inf2_button, inf2_exist)}
+        if(q["sup-thrill-note1"] === null){
+            sup1_exist=false;
+            deactivateButton(sup1_button, sup1_exist)}
+        if(q["sup-thrill-note2"] === null){
+            sup2_exist=false;
+            deactivateButton(sup2_button, sup2_exist)}
+        
+            console.log("exist: "+inf1_exist + inf2_exist + sup1_exist + sup2_exist)
         var thrill_type_string = "";
 
-        if (sup1 === true){
+        if (sup1 === true && sup1_exist){
             setting = q.positions['sup-1'];
             thrillString = q["reference-note"] + q["sup-thrill-note1"]; 
             thrill_type_string = 'sup-1';
         }
 
-        if (sup2 === true){
+        if (sup2 === true && sup2_exist){
             setting = q.positions['sup-2'];
             thrillString = q["reference-note"] + q["sup-thrill-note2"]; 
             thrill_type_string = 'sup-2';
 
         }
-        if (inf1 === true){
+        if (inf1 === true && inf1_exist){
             setting = q.positions['sup-3'];
             thrillString = q["reference-note"] + q["inf-thrill-note1"]; 
             thrill_type_string = 'inf-1';
 
         }
-        if (inf2 === true){
+        if (inf2 === true && inf2_exist){
             setting = q.positions['sup-4'];
             thrillString = q["reference-note"] + q["inf-thrill-note2"];
             thrill_type_string = 'inf-2'; 
 
         }
-
-                
+        
+        if(setting === null){
+            setting = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+            console.log('diobrstia');
+        }
+        console.log(setting);        
     }else{
         var randomNote = noteNames[index];
         setting = getPositionFromNote(randomNote, p);
+        
         console.log("randomnote: " + randomNote);
         console.log("vect: " + setting);
         thrillString = randomNote; 
@@ -987,11 +1018,14 @@ function playAudio(thrillString){
 function choose(thrill, type, typeString){
     console.log("Napoli")
     
-    sup1_button.style.backgroundColor = "";
+    /*sup1_button.style.backgroundColor = "";
     sup2_button.style.backgroundColor = "";
     inf1_button.style.backgroundColor = "";
-    inf2_button.style.backgroundColor = "";
-
+    inf2_button.style.backgroundColor = "";*/
+    pressButton(sup1_button, false);
+    pressButton(sup2_button, false);
+    pressButton(inf1_button, false);
+    pressButton(inf2_button, false);
 
     if(thrill === true){
         isthrill = !isthrill;
@@ -1037,10 +1071,11 @@ function choose(thrill, type, typeString){
     if(isthrill){
         trillo_button.src='toggle_switch_on.png';
         
-        if(sup1){sup1_button.style.backgroundColor = "red"};
+        /*if(sup1){sup1_button.style.backgroundColor = "red"};
         if(sup2){sup2_button.style.backgroundColor = "red"};
         if(inf1){inf1_button.style.backgroundColor = "red"};
-        if(inf2){inf2_button.style.backgroundColor = "red"};
+        if(inf2){inf2_button.style.backgroundColor = "red"};*/
+
         
     }else{trillo_button.src='toggle_switch_off.png';} 
     
@@ -1065,6 +1100,30 @@ function startProcessing(NoteStringSelected = ''){
     }
 }
 
-function setButton (button, value){
-    button
+function pressButton (button, val){
+    if(val){
+        button.style.backgroundColor = '#C84C09';
+        button.style.borderColor = '#C84C09';
+        button.style.borderStyle = 'inset';
+        button.disabled = false;
+    }else{
+        console.log('devediventaregiallooo');
+        button.style.backgroundColor = '#E3B505';
+        button.style.borderColor = '#E3B505';
+        button.style.borderStyle = 'outset';
+        button.disabled = false;
+    }
+}
+
+function deactivateButton(button, val){
+    if(val){
+        button.style.backgroundColor = '#E3B505';
+        button.style.borderColor = '#E3B505';
+        button.style.borderStyle = 'outset';
+    }else{
+        button.style.backgroundColor = '#888';
+        button.style.borderColor = '#888';
+        button.style.borderStyle = 'inset';
+        button.disabled = true;
+    }
 }
