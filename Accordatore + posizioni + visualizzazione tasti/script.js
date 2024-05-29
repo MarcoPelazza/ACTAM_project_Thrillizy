@@ -73,6 +73,14 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function aggiungiNota(x, y) {
+
+        document.getElementById('bemolleButton').style.backgroundColor = '#E3B505';
+        document.getElementById('bemolleButton').style.borderColor = '#E3B505';
+        document.getElementById('bemolleButton').style.borderStyle = 'outset';
+        document.getElementById('diesisButton').style.backgroundColor = '#E3B505';
+        document.getElementById('diesisButton').style.borderColor = '#E3B505';
+        document.getElementById('diesisButton').style.borderStyle = 'outset';
+
         const simboloAccidentalePrecedente = svg.querySelector('.accidental');
         if (simboloAccidentalePrecedente) {
             svg.removeChild(simboloAccidentalePrecedente);
@@ -223,14 +231,19 @@ document.addEventListener("DOMContentLoaded", function() {
     var diesisButton = document.getElementById('diesisButton').addEventListener('click', function() { 
         notaAccidentale = '♯';
         bottonePremuto = true;
-        diesisButton.style.backgroundColor  = 'red';
+        document.getElementById('diesisButton').style.backgroundColor = '#C84C09';
+        document.getElementById('diesisButton').style.borderColor = '#C84C09';
+        document.getElementById('diesisButton').style.borderStyle = 'inset';
 
     });
 
     var bemolleButton = document.getElementById('bemolleButton').addEventListener('click', function() {
         notaAccidentale = '♭';
         bottonePremuto = true;
-        bemolleButton.style.backgroundColor  = 'red';
+        document.getElementById('bemolleButton').style.backgroundColor = '#C84C09';
+        document.getElementById('bemolleButton').style.borderColor = '#C84C09';
+        document.getElementById('bemolleButton').style.borderStyle = 'inset';
+        
     });
 
     function mostraTagliAddizionali(y) {

@@ -2,6 +2,7 @@
 const img = document.getElementById('image');
 const svg = document.getElementById('svgKeys');
 
+
 //image and svg resizing
 img.style.resize='vertical';
 img.height = window.innerHeight;
@@ -432,7 +433,7 @@ const th = [
         'note1t': 'D4b',
         'note2t': 'D4',
         'note3t': 'B3',
-        'note5t': 'B3b',
+        'note4t': 'B3b',
         'isalt': false
     },
     {
@@ -990,16 +991,23 @@ function run(index, isthrill, sup1, sup2, inf1, inf2){
 //console.log(ChosenNote);
 
 //playnote
+var Player = document.getElementById("AudioPlayer");
+
 function playAudio(thrillString){
     
     //var FIleName = "Eb3";
-    console.log("da stampare:  " + thrillString);
+
+    console.log("da stampare:  " + thrillString + index);
     var FIleName = thrillString;
     var AudioPath = "Audio_Stems/Suoni Piffero - "+FIleName+".mp3";
     console.log(AudioPath);
-    var Player = document.getElementById("AudioPlayer");
+    
     Player.src= AudioPath;
     //Player.play();
+}
+
+function playThisAudio(){
+    Player.play();
 }
 ///playnote
  //GIOBALDO
@@ -1126,3 +1134,4 @@ function deactivateButton(button, val){
         button.disabled = true;
     }
 }
+
