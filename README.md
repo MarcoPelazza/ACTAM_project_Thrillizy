@@ -70,7 +70,7 @@ This function handles the rendering of a note on a musical staff, ensuring that 
 
 ![Alt text](Pentacazzi/aggiungiNota1.png)
 
-## Parameters and description
+#### Parameters and description
 
 Parameters:
 
@@ -100,7 +100,7 @@ This section of the code is responsible for handling accidental notes (sharps an
 
 ![Alt text](Pentacazzi/handlingAcc.png)
 
-## Description
+#### Description
 
 The condition if (bottonePremuto && notaAccidentale) checks if the button is pressed and an accidental note (either sharp or flat) is specified.
 let stringControl = notaMusicale[0]; extracts the first character of the musical note, representing the base note.
@@ -119,7 +119,7 @@ This part of the script is responsible for adding and removing permanent ledger 
 
 ![Alt text](Pentacazzi/img4.png)
 
-## Description
+#### Description
 
 The function first calls rimuoviTagliAddizionaliPermanenti() to remove any existing permanent ledger lines from the SVG.
 
