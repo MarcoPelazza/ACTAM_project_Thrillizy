@@ -328,6 +328,7 @@ In my academic experience, it is the first time that I got the chance to work wi
 ---
 
 Project developed by:
-* Di Lorenzo Giuliano
-* Mugnaini Nicola
-* Ouali Ernest
+* Baldini Giovanni
+* Cagnetta Angelica
+* Panettieri Francesco
+* Pelazza Marco
