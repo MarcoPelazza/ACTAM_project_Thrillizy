@@ -92,8 +92,8 @@ This class associates the note to its relative trill and memorize the informatio
 ![Alt text](Pentacazzi/getThrills.png)
 
 It's initialized by the constructor with the following attributes:
-* position: it's an object of the `Position` class of the corresponding note
-* dict: it's the trills `JSON` which is a kind of db that contains the information about the trills
+* `this.position`: it's an object of the `Position` class of the corresponding note
+* `this.dict`: it's the trills `JSON` which is a kind of db that contains the information about the trills
 
 The `getThrills()` method returns the complete trill.
 
