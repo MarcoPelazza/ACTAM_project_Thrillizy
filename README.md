@@ -113,6 +113,25 @@ document.getElementById('notaVisualizzata').textContent = 'Nota: ' + notaMusical
 
 aggiungiTagliAddizionaliPermanenti(y); calls a function to add permanent ledger lines to the musical staff, ensuring the note is properly displayed on the staff.
 
+### Hanlding ledger lines
+
+This part of the script is responsible for adding and removing permanent ledger lines to the musical staff based on the provided y-coordinate. It ensures that additional ledger lines are added or removed dynamically to accommodate notes outside the standard staff range.
+
+![Alt text](Pentacazzi/img4.png)
+
+## Description
+
+The function first calls rimuoviTagliAddizionaliPermanenti() to remove any existing permanent ledger lines from the SVG.
+
+Constants x1 and x2 define the starting and ending x-coordinates for the ledger lines.
+If the provided y-coordinate (y) is below the starting y-coordinate of the staff (startY), additional ledger lines are added above the staff to accommodate lower notes.
+
+If the provided y-coordinate is above the upper limit of the staff (beyond 4 times the line spacing), additional ledger lines are added below the staff to accommodate higher notes.
+
+This function iterates over each permanent ledger line in the tagliAddizionaliPermanenti array and removes them from the SVG element.
+
+After removing all lines, the tagliAddizionaliPermanenti array is cleared, ensuring it's ready for new lines to be added.
+
 
 
 
