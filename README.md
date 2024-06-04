@@ -61,7 +61,8 @@ You can obviously listen to the correct execution of each trill, by pressing the
 
 
 ## How Does It Work?
-### Diagramma a blocchi
+### Block diagram
+
 This project is composed of one HTML file, one CSS file and four JavaScript files:
 
 * `Animations.js`: collects all the functionalities related to visual representations such as leds activation, grid design (through an HTML5 canvas) and melody display.
