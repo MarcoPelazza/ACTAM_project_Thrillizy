@@ -23,7 +23,7 @@ Don't worry, anything shown in the video will be explained below in this page.
 
 The very first step to follow to use this website is to have the flute in hand and a lot of good will. 
 
-The staff which will appear on the display will allow you to select the note whose position you want to know/remember. The reference adopted for the staff is the treble clef without any key signature: for this reason is therefore possible to choose if the note is altered or not by pressing, before the note, one of the two buttons respectively corresponding to sharp `#` or flat `b`.
+The staff which will appear on the display will allow you to select the note whose position you want to know/remember. The reference adopted for the staff is the treble clef without any key signature: for this reason is therefore possible to choose if the note is altered or not by pressing, before the note, one of the two buttons respectively corresponding to sharp `♯` or flat `♭`.
 
 It's also possibile to select notes below or above the staff, thanks to the ledger lines put as a reference while pointing with the mouse on the staff.
 
@@ -168,6 +168,18 @@ The `conversion` function is responsible for converting a given musical note to 
 ![Alt text](Pentacazzi/conversion.png)
 
 #### Description
+
+The function initializes the conversion variable with the input notaMusicale, assuming no conversion is needed initially.
+It extracts the first two characters of the input note and stores it in the str variable.
+
+If the input note contains a sharp (♯), it iterates over the noteArray to find the corresponding note.
+
+When a match is found, it assigns the enharmonic equivalent note with a flat (♭) to the conversion variable.
+The loop breaks as soon as a match is found.
+
+If the input note contains a flat (♭), it directly assigns the input note with a flat (♭) to the conversion variable.
+
+The function returns the converted note.
 
 
 
