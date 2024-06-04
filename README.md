@@ -124,7 +124,7 @@ The newly created note element is appended to the SVG element and the variable `
 
 ### Handling accidental notes
 
-This section of the code is responsible for handling accidental notes (sharps and flats) when a button is pressed `(bottonePremuto)` and an accidental note `(notaAccidentale)` is specified. It updates the musical note with the accidental and displays it on the SVG element.
+This section of the code is responsible for handling accidental notes (sharps and flats) when a button is pressed (`bottonePremuto`) and an accidental note (`notaAccidentale`) is specified. It updates the musical note with the accidental and displays it on the SVG element.
 
 ![Alt text](Pentacazzi/handlingAcc.png)
 
