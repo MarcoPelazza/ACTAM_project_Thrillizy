@@ -118,7 +118,11 @@ When the function `run(index,isThrill, sup1, sup2, inf1, inf2)` is runned there 
 
 When the function `choose(thrill, type, typeString)` is runned it rules the type of thrill: `SUP1`,`SUP2`,`INF1` or `INF2`. 
 
-`tunerStartStop('thrill')` -> This function terminates the tuner and launches the `run`.
+![Alt text](Pentacazzi/tunStaSto.png)
+
+`tunerStartStop('thrill')` -> This function (from the `script_accordatore.js`) terminates the tuner and launches the `run`. 
+
+
 
 
 
