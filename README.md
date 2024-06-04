@@ -60,6 +60,41 @@ You can obviously listen to the correct execution of each trill, by pressing the
 > It ain't much, but it's honest work.
 
 
+## How Does It Work?
+### Block diagram
+
+This project is composed of one HTML file, one CSS file and four JavaScript files:
+
+* `Script_accordatore.js`: is the management of the tuner.
+* `Script.js`: is the management of the staff.
+* `Script_agg_aprile.js`: è lo script principale che collega posizioni e suoni.
+* `yin.js`: it is a library used for fundamental frequency recognition.
+
+
+
+## Script_agg_aprile
+### Position class
+The class called `Position(note, frets, number)` is the class utilized for the elaboration of the positions of the single notes. It's equipped by a constructor which initialises 3 attributes:
+* note: it's the correspondent note
+* frets: it's the position relative to the note
+* number: it's the code associated to the note
+
+For each attribute `Getter` methods are created. The `getBinaryFrets()` returns the keys of the associated position in binary:
+* 0: not pressed key
+* 1: pressed key
+### Thrills of note
+This classe associates the note to the relative trill and memorize the information relatives to the correspondent trill. It's initialized by the constructor with the following attributes:
+* position: it's an object of the `Position` class of the corresponding note
+* dict: it's the trills `JSON` which is a kind of db that contains the information about the trills
+
+The `getThrills()` method returns the complete trill
+### Const position
+### Const TH
+### Func RUN
+### Func CHOOSE
+### Music Description 
+
+
 ## PENTACAZZI
 
 ### Functions `aggiungiNota`
@@ -144,39 +179,7 @@ After removing all lines, the tagliAddizionaliPermanenti array is cleared, ensur
 
 
 
-## How Does It Work?
-### Block diagram
 
-This project is composed of one HTML file, one CSS file and four JavaScript files:
-
-* `Script_accordatore.js`: is the management of the tuner.
-* `Script.js`: is the management of the staff.
-* `Script_agg_aprile.js`: è lo script principale che collega posizioni e suoni.
-* `yin.js`: it is a library used for fundamental frequency recognition.
-
-
-
-## Script_agg_aprile
-### Position class
-The class called `Position(note, frets, number)` is the class utilized for the elaboration of the positions of the single notes. It's equipped by a constructor which initialises 3 attributes:
-* note: it's the correspondent note
-* frets: it's the position relative to the note
-* number: it's the code associated to the note
-
-For each attribute `Getter` methods are created. The `getBinaryFrets()` returns the keys of the associated position in binary:
-* 0: not pressed key
-* 1: pressed key
-### Thrills of note
-This classe associates the note to the relative trill and memorize the information relatives to the correspondent trill. It's initialized by the constructor with the following attributes:
-* position: it's an object of the `Position` class of the corresponding note
-* dict: it's the trills `JSON` which is a kind of db that contains the information about the trills
-
-The `getThrills()` method returns the complete trill
-### Const position
-### Const TH
-### Func RUN
-### Func CHOOSE
-### Music Description 
 
 Basically, when the user adds a note in the sequence to be played, a `note` object is created as:
 
