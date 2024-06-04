@@ -79,9 +79,9 @@ The class called `Position(note, frets, number)` is the class utilized for the e
 ![Alt text](Pentacazzi/classPosition.png)
 
 It's equipped by a constructor which initialises 3 attributes:
-* note: it's the correspondent note
-* frets: it's the position relative to the note
-* number: it's the code associated to the note
+* `getNote`: it's the correspondent note
+* `getFrets`: it's the position relative to the note
+* `getNumber`: it's the code associated to the note
 
 For each attribute `Getter` methods are created. The `getBinaryFrets()` returns the keys of the associated position in binary:
 * 0: not pressed key
