@@ -99,7 +99,7 @@ The `getThrills()` method returns the complete trill
 
 ### Function `aggiungiNota`
 
-The aggiungiNota function is designed to add a musical note representation to an SVG element at a specified position. 
+The `aggiungiNota` function is designed to add a musical note representation to an SVG element at a specified position. 
 
 This function handles the rendering of a note on a musical staff, ensuring that any previous accidental symbols or notes are removed before adding the new note.
 
@@ -116,9 +116,9 @@ Descriptions:
 
 The function starts by checking if there are any existing accidental symbols (like sharps or flats) represented by elements with the class accidental within the SVG. If found, it removes them.
 It also checks if there is an existing note (nota) and removes it to ensure that only the most recent note is displayed.
-- The cx attribute (x-coordinate) is set to x + 150, which positions the note 150 units to the right of the provided x coordinate.
-- The cy attribute (y-coordinate) is set to y, positioning the note at the provided y-coordinate.
-- The r attribute is set to 10, giving the note a radius of 10 units.
+- The `cx` attribute (x-coordinate) is set to x + 150, which positions the note 150 units to the right of the provided x coordinate.
+- The `cy` attribute (y-coordinate) is set to y, positioning the note at the provided y-coordinate.
+- The `r` attribute is set to 10, giving the note a radius of 10 units.
 
 The newly created note element is appended to the SVG element and the variable notaMusicale is assigned the musical note corresponding to the y-coordinate from the noteMap object. 
 
@@ -150,16 +150,16 @@ This part of the script is responsible for adding and removing permanent ledger 
 
 #### Description
 
-The function first calls rimuoviTagliAddizionaliPermanenti() to remove any existing permanent ledger lines from the SVG.
+The function first calls `rimuoviTagliAddizionaliPermanenti()` to remove any existing permanent ledger lines from the SVG.
 
 Constants x1 and x2 define the starting and ending x-coordinates for the ledger lines.
 If the provided y-coordinate (y) is below the starting y-coordinate of the staff (startY), additional ledger lines are added above the staff to accommodate lower notes.
 
 If the provided y-coordinate is above the upper limit of the staff (beyond 4 times the line spacing), additional ledger lines are added below the staff to accommodate higher notes.
 
-This function iterates over each permanent ledger line in the tagliAddizionaliPermanenti array and removes them from the SVG element.
+This function iterates over each permanent ledger line in the `tagliAddizionaliPermanenti` array and removes them from the SVG element.
 
-After removing all lines, the tagliAddizionaliPermanenti array is cleared, ensuring it's ready for new lines to be added.
+After removing all lines, the `tagliAddizionaliPermanenti` array is cleared, ensuring it's ready for new lines to be added.
 
 ### Function `conversion`
 
@@ -169,7 +169,7 @@ The `conversion` function is responsible for converting a given musical note to 
 
 #### Description
 
-The function initializes the conversion variable with the input notaMusicale, assuming no conversion is needed initially.
+The function initializes the conversion variable with the input `notaMusicale`, assuming no conversion is needed initially.
 It extracts the first two characters of the input note and stores it in the str variable.
 
 If the input note contains a sharp (♯), it iterates over the noteArray to find the corresponding note.
