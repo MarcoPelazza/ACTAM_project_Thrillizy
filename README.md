@@ -118,10 +118,43 @@ When the function `run(index,isThrill, sup1, sup2, inf1, inf2)` is runned there 
 
 When the function `choose(thrill, type, typeString)` is runned it rules the type of thrill: `SUP1`,`SUP2`,`INF1` or `INF2`. 
 
+![Alt text](Pentacazzi/tunStaSto.png)
+
 `tunerStartStop('thrill')` -> This function (from the `script_accordatore.js`) terminates the tuner and launches the `run`. 
 
+## script_accordatore.js
 
+### Function: `initAudioContext`
 
+The `initAudioContext` function initializes the audio context and sets up microphone input with filtering and analysis capabilities.
+
+![Alt text](Pentacazzi/audioCont.png)
+
+### Function: `getFrequency`
+
+The `getFrequency` function is responsible for retrieving the frequency data from the microphone input and performing real-time frequency analysis to determine the current pitch. It then updates the UI elements based on the detected pitch.
+
+![Alt text](Pentacazzi/freq.png)
+
+`const frequencyToNoteDB` -> This array is a correspondence table between frequencies and musical notes. Each element of the array is a sub-array containing the name of the note and its corresponding frequency in hertz.
+
+### Function: `handleNoteDifferences`
+
+The `handleNoteDifferences` function calculates the difference between the detected frequency and the target note, determining whether the detected frequency is lower or higher than the target note and computing the difference in cents accordingly.
+
+![Alt text](Pentacazzi/handleNote.png)
+
+### Function: `stopAudioContext`
+
+The `stopAudioContext` function is responsible for stopping the audio context, clearing the frequency interval, and releasing any active media streams associated with microphone input.
+
+![Alt text](Pentacazzi/StopTun.png)
+
+### Function `getColor`
+
+The `getColor` function calculates and returns a hexadecimal color based on the provided value.
+
+![Alt text](Pentacazzi/Convert.png)
 
 
 ## PENTACAZZI
