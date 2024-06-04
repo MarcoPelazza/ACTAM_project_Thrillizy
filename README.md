@@ -74,7 +74,11 @@ This project is composed of one HTML file, one CSS file and four JavaScript file
 
 ## Script_agg_aprile
 ### Position class
-The class called `Position(note, frets, number)` is the class utilized for the elaboration of the positions of the single notes. It's equipped by a constructor which initialises 3 attributes:
+The class called `Position(note, frets, number)` is the class utilized for the elaboration of the positions of the single notes. 
+
+![Alt text](Pentacazzi/classPosition.png)
+
+It's equipped by a constructor which initialises 3 attributes:
 * note: it's the correspondent note
 * frets: it's the position relative to the note
 * number: it's the code associated to the note
@@ -83,21 +87,35 @@ For each attribute `Getter` methods are created. The `getBinaryFrets()` returns 
 * 0: not pressed key
 * 1: pressed key
 ### Thrills of note
-This class associates the note to its relative trill and memorize the information relatives to the correspondent trill. It's initialized by the constructor with the following attributes:
+This class associates the note to its relative trill and memorize the information relatives to the correspondent trill.
+
+![Alt text](Pentacazzi/getThrills.png)
+
+It's initialized by the constructor with the following attributes:
 * position: it's an object of the `Position` class of the corresponding note
 * dict: it's the trills `JSON` which is a kind of db that contains the information about the trills
 
 The `getThrills()` method returns the complete trill.
+
 The `positionAlterationManager()` method manages the eventual alterations of the corresponding trill position.
+
+![Alt text](Pentacazzi/posManager.png)
+
 ### Const `position`
 This constant is an array of arrays which contains all the notes positions
 ### Const `th`
 This is an object `JSON` which contains all the information about trills.
 ### Func `run`
+
+![Alt text](Pentacazzi/run.png)
+
 When the function `run(index,isThrill, sup1, sup2, inf1, inf2)` is runned there are two possible results:
 * `isThrill===True` returns the trill
 * `isThrill===False` returns the corresponding single note position
 ### Func `choose`
+
+![Alt text](Pentacazzi/choose.png)
+
 When the function `choose(thrill, type, typeString)` is runned it rules the type of trill: `SUP1`,`SUP2`,`INF1` or `INF2`. 
 
 
