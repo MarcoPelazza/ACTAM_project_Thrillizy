@@ -122,8 +122,7 @@ When the function `choose(thrill, type, typeString)` is runned it rules the type
 
 `tunerStartStop('thrill')` -> This function (from the `script_accordatore.js`) terminates the tuner and launches the `run`. 
 
-## script_accordatore.js
-
+## Script_accordatore.js
 ### Function: `initAudioContext`
 
 The `initAudioContext` function initializes the audio context and sets up microphone input with filtering and analysis capabilities.
@@ -157,8 +156,7 @@ The `getColor` function calculates and returns a hexadecimal color based on the 
 ![Alt text](Pentacazzi/Convert.png)
 
 
-## PENTACAZZI
-
+## Script.js
 ### Function `aggiungiNota`
 
 The `aggiungiNota` function is designed to add a musical note representation to an SVG element at a specified position. 
