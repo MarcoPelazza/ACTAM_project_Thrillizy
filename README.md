@@ -103,15 +103,16 @@ This section of the code is responsible for handling accidental notes (sharps an
 #### Description
 
 The condition if (bottonePremuto && notaAccidentale) checks if the button is pressed and an accidental note (either sharp or flat) is specified.
-let stringControl = notaMusicale[0]; extracts the first character of the musical note, representing the base note.
+
+`let stringControl = notaMusicale[0];` extracts the first character of the musical note, representing the base note.
 
 If the accidental note is a flat (♭) and the base note is not 'C' or 'F', the flat is added to the musical note.
 
 If the accidental note is a sharp (♯) and the base note is not 'B' or 'E', the sharp is added to the musical note.
 
-document.getElementById('notaVisualizzata').textContent = 'Nota: ' + notaMusicale; updates the text content of an HTML element with the ID notaVisualizzata to display the current musical note.
+`document.getElementById('notaVisualizzata').textContent = 'Nota: ' + notaMusicale;` updates the text content of an HTML element with the ID notaVisualizzata to display the current musical note.
 
-aggiungiTagliAddizionaliPermanenti(y); calls a function to add permanent ledger lines to the musical staff, ensuring the note is properly displayed on the staff.
+`aggiungiTagliAddizionaliPermanenti(y);` calls a function to add permanent ledger lines to the musical staff, ensuring the note is properly displayed on the staff.
 
 ### Hanlding ledger lines
 
