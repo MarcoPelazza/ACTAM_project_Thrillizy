@@ -60,6 +60,17 @@ You can obviously listen to the correct execution of each trill, by pressing the
 > It ain't much, but it's honest work.
 
 
+## PENTACAZZI
+
+### Functions `aggiungiNota`
+
+The aggiungiNota function is designed to add a musical note representation to an SVG element at a specified position. 
+
+This function handles the rendering of a note on a musical staff, ensuring that any previous accidental symbols or notes are removed before adding the new note.
+
+
+
+
 
 
 
