@@ -68,6 +68,9 @@ The aggiungiNota function is designed to add a musical note representation to an
 
 This function handles the rendering of a note on a musical staff, ensuring that any previous accidental symbols or notes are removed before adding the new note.
 
+![Alt text](Pentacazzi/aggiungiNota1.png)
+
+
 
 
 
