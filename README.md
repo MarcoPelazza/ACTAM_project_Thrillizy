@@ -1,4 +1,4 @@
-# Flute POS
+# TRILLEASY
 
 ## A Graphic Interface To Learn How To Play The Transverse Flute
 
@@ -11,7 +11,7 @@ This project is the result of a team work for the course _Advanced Coding Tools 
 
 The graphic interface allows you to insert notes on the staff, giving you the possibility of choosing whether the note is altered or not and then the relative flute position will appear on the display. Moreover, it's also possible to listen the right sound of that note and verify if the note played by the flutist is correct or not, through a tuner connected to the microphone.
 
-## Video DEMO
+### Video DEMO
 
 Here is a quick video tutorial:
 METTERE VIDEO!
@@ -206,149 +206,7 @@ The function returns the converted note.
 
 
 
-Basically, when the user adds a note in the sequence to be played, a `note` object is created as:
 
-``` JavaScript
-note = {
-    letter: letter,
-    octave: octave,
-    alteration: alteration,
-    duration: duration,
-    start_index: start_index
-}
-```
-
-And it is pushed into the `sequence` array of notes.
-Consider that each note has a tatum-wise reference `start_index` for the grid which indicates when the note will be played, so the order of the notes inside the sequence is irrelevant.
-
-In order to play the sequence, each note is translated in a `data` object as:
-
-``` JavaScript
-data = {
-    frequency: f,
-    duration_ms: ms,
-    time: start
-}
-```
-
-This is when BPM and tuning frequency are used: both `frequency` and `duration_ms` are the result of two functions that compute physical data from musical information.
-Also `time_ms` is the milliseconds value of the `start_index` (which is in terms of 16th).
-
-### Sound Chain and Audio Synthesis
-
-Each of notes of `data` array will be passed to the `playNote` function to be played accordingly.\
-The generic sound chain implemented inside this function is:
-
-``` mermaid
-graph LR
-    subgraph ADSR
-        A[Oscillator] --> B[ADSR]
-    end
-
-    subgraph Delay
-        B --> X[If delay_bool = true]
-        X --> D[Delay 1]
-        D --> E[Gain Delay 1]
-        X --> F[Delay 2]
-        F --> G[Gain Delay 2]
-    end
-
-    subgraph Reverb
-        B --> Y[If reverb_bool = true]
-        Y --> W[Lowpass filter]
-        W --> V[Pre-delay]
-        V --> T[Reverb]
-        T --> U[Gain Reverb]
-        U --> T
-    end
-
-    B --> C[Compressor]
-    E --> C
-    G --> C
-    U --> C
-    C --> Q[Audio Context Destination]
-```
-
-The properties of the note (`frequency` and `duration_ms`) are used as it follow:
-
-``` JavaScript
-function playNote(note) {
-    /*
-    This function requires a note object
-    It plays a single note
-    */
-
-    // Definition of note's oscillator
-    let o = c.createOscillator();
-    o.frequency.value = note.frequency;     // <---
-    o.type = wave_type;
-    
-    // ...
-    
-    // Envelope shaping
-    g_adsr.gain.setValueAtTime(0, c.currentTime);
-    g_adsr.gain.linearRampToValueAtTime(1, c.currentTime + attack);
-    g_adsr.gain.linearRampToValueAtTime(1, c.currentTime + note.duration_ms / 1000 - release);      // <---
-    g_adsr.gain.linearRampToValueAtTime(0, c.currentTime + note.duration_ms / 1000);        // <---
-    
-    // ...
-
-    // Playing the oscillator
-    o.start();
-    // Scheduling the oscillator stop
-    setTimeout(() => o.stop(), c.currentTime + note.duration_ms);       // <---
-
-    // ...
-}
-```
-
-When the selected waveform is `"sine"`, a slightly different version is employed:
-
-
-``` mermaid
-graph LR
-    subgraph ADSR and Additive Synthesis
-        A[Oscillator] --> H[Gain 1 = 1]
-        I[Oscillator 2] --> J[Gain 2]
-        K[Oscillator 3] --> L[Gain 3]
-        M[Oscillator 4] --> N[Gain 4]
-        O[Oscillator 5] --> P[Gain 5]
-        H --> X[Sine Compressor]
-        J --> X
-        L --> X
-        N --> X
-        P --> X
-        X --> B[ADSR]
-    end
-
-    subgraph Delay
-        B --> Y[If delay_bool = true]
-        Y --> D[Delay 1]
-        D --> E[Gain Delay 1]
-        Y --> F[Delay 2]
-        F --> G[Gain Delay 2]
-    end
-
-    subgraph Reverb
-        B --> Z[If reverb_bool = true]
-        Z --> W[Lowpass filter]
-        W --> V[Pre-delay]
-        V --> T[Reverb]
-        T --> U[Gain Reverb]
-        U --> T
-    end
-
-    B --> C[Compressor]
-    E --> C
-    G --> C
-    U --> C
-    C --> Q[Audio Context Destination]
-```
-
-The difference is that now an additive-synthesis technique has been developed, in order to make the sound of the single oscillator more interesting and appealing.\
-Additive synthesis is a technique that uses the superposition of different sine waves.
-In this case, the four added oscillators have frequencies of the first partials of the note: it means that each oscillator plays a multiple of the note's frequency. So, oscillator `2` plays `2 * note.frequency`, oscilator `3` plays `3 * note.frequency` and so on.
-Only exception is oscillator `5` that plays `0.5 * note.frequency`, which is not an harmonic but a sub-harmonic.
 
 ### Layout Design
 
@@ -363,43 +221,11 @@ CSS provided the opportunity to work from a purely graphical point of view, with
 The focus was to have the most compact graphics possible, as well as a clear and intuitive interface, to be easily used during the composition of the sequence.\
 It is important to emphasise, for the reasons mentioned above, how some `label` elements were inserted precisely to make it easier to use and free of misunderstandings.
 
-### Grid Representation
 
-At the beginning, both the grid and the keyboard are drawn by `drawGrid` and `drawKeyboard` functions, called together by `clearAndDrawCanvas` function, which clears and draws again the canvas.\
-After that, whenever a `note` objects is defined and added in the `sequence`, it is drawn in the grid by `drawNoteInGrid` function, which uses the note's musical information to do so (without BPM and tuning frequency).
-
-When the user loads a sequence from a text file, the `drawSequenceInGrid` function reads the sequence and calls `drawNoteInGrid` for each element of the array.
-
-### Notes Implementation Through The Grid
-
-In order to allow the user to add notes through the grid, several considerations were taken into account.\
-Each cell (along the y axis) is related to a pitch, depending on the chosen octave range.
-Each cell (along the x axis) is related to the tatum (in this case 16th).\
-When clicking on a cell, the code will check if the note is still available. If the note is already present in that moment, an alert will pop up and the user will have to click elsewhere.
-Checking the notes availability is easily done by creating a mirror grid (`2d-array`) filled with boolean values: `True` means that the cell is available, `False` means the opposite.\
-When loading the sequence for the first time, the `mirror_grid` is initialised with `True` everywhere (because the grid is empty).\
-When a note is effectively added to the sequence (with a double click), the `mirror_grid` will be updated: the elements corresponding to the note attributes (pitch, duration and starting time instant) will be changed to `False`.\
-When loading a sequence (through the `Load Melody` button), the `mirror_grid` is updated in the same way.\
-When clearing the sequence, the code initialises the `mirror_grid` again.\
-The mirror grid update also happens when we add notes using the buttons.
-
-### Files Management
-
-In order to save the written sequences into the user's computer, we used a method where we create a temporary link into the webpage.\
-A window prompt asks to enter the file's name.
-Once it's done, a link is created into the webpage and filled with a `Blob` object containing the sequence (passed as a `string`).\
-Then, the code automatically downloads this file with a `.txt` format into the user's computer.
-Finally, the link is immediately removed.
-
-In order to load a written sequence, we used the `FileReader` object from the File System API of JavaScript.\
-When we click on the `load file` button, a `file selector` window immediately appears on the screen, allowing only `.txt` files.\
-Once the file is selected, its content is loaded as text into an `output` element of the webpage.\
-The sequence is updated accordingly to the content of this `output` element, after converting it into an `object`.
-In the end, the `mirror_grid` is updated to match the new sequence and the code draws it into the grid.
 
 ## Challenges Encountered
 
-### Di Lorenzo
+### Baldini
 
 The main difficulty I had during the development of this project was to find the best melody and note architecture in order to implement the features we had in mind.\
 At first, the code allowed to play only singular-note melodies, then we added chords (but only with the same duration for all notes).\
@@ -411,12 +237,12 @@ Regarding the resulting sounds, the sound quality was another challenge I wanted
 The use of low-level functionalities and elements allowed us to write faster code, but didn't lead to very pleasant sounds.
 So I tried to develop a more intricate sound processing chain, including compressors, delay and reverb, and tried to resemble a professional-like sound synthesis by using an additive synthesis technique instead of using a single oscillators.
 
-### Mugnaini
+### Cagnetta
 
 From the point of view of the layout, I believe that the most significant challenge found was to represent and position all the elements in a coherent way with the idea proposed initially.
 It was not easy above all to stack the different elements (buttons, leds...); this has brought various changes during the development but we can consider ourselves satisfied with the final version obtained.
 
-### Ouali
+### Panettieri
 
 My personal challenges dealt with JavaScript functionalities that weren't seen during lectures or just briefly discussed.\
 The functionalities I struggled with were: `Blob` object, `FileReader` object and asynchronous functions.\
@@ -429,6 +255,8 @@ It is a great tool that I'll keep using throughout my life.\
 However, I must say that extra carefulness is required when using such tools as errors are frequent. 
 Using them should never undermine the developer's mind and our thirst of "Do It Yourself".
 Instead, they should be considered as sidekicks, helping us facing logic issues or tough challenges.
+
+### Pelazza
 
 ## Credits
 
