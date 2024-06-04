@@ -105,14 +105,14 @@ The `positionAlterationManager()` method manages the eventual alterations of the
 This constant is an array of arrays which contains all the notes positions
 ### Const `th`
 This is an object `JSON` which contains all the information about trills.
-### Func `run`
+### Function `run`
 
 ![Alt text](Pentacazzi/run.png)
 
 When the function `run(index,isThrill, sup1, sup2, inf1, inf2)` is runned there are two possible results:
 * `isThrill===True` returns the trill
 * `isThrill===False` returns the corresponding single note position
-### Func `choose`
+### Function `choose`
 
 ![Alt text](Pentacazzi/choose.png)
 
