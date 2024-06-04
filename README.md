@@ -87,12 +87,16 @@ This classe associates the note to the relative trill and memorize the informati
 * position: it's an object of the `Position` class of the corresponding note
 * dict: it's the trills `JSON` which is a kind of db that contains the information about the trills
 
-The `getThrills()` method returns the complete trill
-### Const position
-### Const TH
-### Func RUN
-### Func CHOOSE
-### Music Description 
+The `getThrills()` method returns the complete trill.
+The `positionAlterationManager()` method manages the eventual alterations of the corresponding trill position.
+### Const `position`
+This constant is an array of arrays which contains all the notes positions
+### Const `th`
+This is an object `JSON` which contains all the information about trills.
+### Func `run`
+The function `run(index,isthrill, sup1, sup2)`
+### Func `choose`
+
 
 
 ## PENTACAZZI
