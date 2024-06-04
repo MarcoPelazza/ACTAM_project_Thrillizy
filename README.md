@@ -10,6 +10,9 @@ This project is the result of a team work for the course _Advanced Coding Tools 
 ## How Can I Use It?
 
 The graphic interface allows you to insert notes on the staff, giving you the possibility of choosing whether the note is altered or not and then the relative flute position will appear on the display. Moreover, it's also possible to listen the right sound of that note and verify if the note played by the flutist is correct or not, through a tuner connected to the microphone.
+
+## Video DEMO
+
 Here is a quick video tutorial:
 METTERE VIDEO!
 <video src="./Video_demo.mp4" controls title="Title"></video
@@ -65,12 +68,10 @@ You can obviously listen to the correct execution of each trill, by pressing the
 
 This project is composed of one HTML file, one CSS file and four JavaScript files:
 
-* `Animations.js`: collects all the functionalities related to visual representations such as leds activation, grid design (through an HTML5 canvas) and melody display.
-* `Buttons_functions.js`: decribes all instructions that occur when any button is clicked.
-* `Code.js`: implements all main elaborations such as melody description, music-to-audio translation, sound synthesis and file management.
-* `Variables_declaration.js`: defines every global variable and its default value.
-
-All the functionalities offered by the code have been written by scratch, without using any particular library.
+* `Script_accordatore.js`: is the management of the tuner.
+* `Script.js`: is the management of the staff.
+* `Script_agg_aprile.js`: è lo script principale che collega posizioni e suoni.
+* `yin.js`: it is a library used for fundamental frequency recognition.
 
 ### Music Description 
 
