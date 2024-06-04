@@ -31,7 +31,9 @@ Obviously it will be only possible to choose the notes that are within the range
 ### Looking at the position
 
 Once you've selected the note on the staff, the relative position will appear on the flute picture put on the left side, in particular the keys to press will be seen in black.
+
 Note that the keys to press with the thumb of the left hand, which are not visible in the view in which the flute has been drawn, are positioned detached from the body of the flute, in correspondence of its real position.
+
 And that's it!
 You're done!
 Now it's time to play!
