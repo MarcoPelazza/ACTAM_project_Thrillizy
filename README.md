@@ -161,6 +161,11 @@ This function iterates over each permanent ledger line in the tagliAddizionaliPe
 
 After removing all lines, the tagliAddizionaliPermanenti array is cleared, ensuring it's ready for new lines to be added.
 
+### Function `conversion`
+
+The `conversion` function is responsible for converting a given musical note to its enharmonic equivalent, considering any sharps or flats present in the note. It utilizes a predefined array of musical notes (noteArray) for reference.
+
+![Alt text](Pentacazzi/img4.png)
 
 
 
@@ -170,6 +175,11 @@ After removing all lines, the tagliAddizionaliPermanenti array is cleared, ensur
 
 
 
+
+
+
+
+## GiulianoGianni
 
 
 
