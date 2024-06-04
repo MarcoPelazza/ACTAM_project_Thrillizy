@@ -1,4 +1,4 @@
-# TRILLEASY
+# THRILLIZY
 
 ## A Graphic Interface To Learn How To Play The Transverse Flute
 
