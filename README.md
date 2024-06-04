@@ -11,7 +11,7 @@ This project is the result of a team work for the course _Advanced Coding Tools 
 
 The graphic interface allows you to insert notes on the staff, giving you the possibility of choosing whether the note is altered or not and then the relative flute position will appear on the display. Moreover, it's also possible to listen the right sound of that note and verify if the note played by the flutist is correct or not, through a tuner connected to the microphone.
 Here is a quick video tutorial:
-
+METTERE VIDEO!
 <video src="./Video_demo.mp4" controls title="Title"></video
 
 Don't worry, anything shown in the video will be explained below in this page.
@@ -20,7 +20,7 @@ Don't worry, anything shown in the video will be explained below in this page.
 
 The very first step to follow to use this website is to have the flute in hand and a lot of good will. 
 
-The staff which will appear on the display will allow you to select the note whose position you want to know/remember. The reference adopted for the staff is the treble clef without any key signature: for this reason is therefore possible to choose if the note is altered or not by pressing one of the two buttons respectively corresponding to sharp `#` or flat `b`.
+The staff which will appear on the display will allow you to select the note whose position you want to know/remember. The reference adopted for the staff is the treble clef without any key signature: for this reason is therefore possible to choose if the note is altered or not by pressing, before the note, one of the two buttons respectively corresponding to sharp `#` or flat `b`.
 
 It's also possibile to select notes below or above the staff, thanks to the ledger lines put as a reference while pointing with the mouse on the staff.
 
