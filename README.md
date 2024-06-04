@@ -83,7 +83,7 @@ For each attribute `Getter` methods are created. The `getBinaryFrets()` returns 
 * 0: not pressed key
 * 1: pressed key
 ### Thrills of note
-This classe associates the note to the relative trill and memorize the information relatives to the correspondent trill. It's initialized by the constructor with the following attributes:
+This class associates the note to its relative trill and memorize the information relatives to the correspondent trill. It's initialized by the constructor with the following attributes:
 * position: it's an object of the `Position` class of the corresponding note
 * dict: it's the trills `JSON` which is a kind of db that contains the information about the trills
 
@@ -94,9 +94,11 @@ This constant is an array of arrays which contains all the notes positions
 ### Const `th`
 This is an object `JSON` which contains all the information about trills.
 ### Func `run`
-The function `run(index,isthrill, sup1, sup2)`
+When the function `run(index,isThrill, sup1, sup2, inf1, inf2)` is runned there are two possible results:
+* `isThrill===True` returns the trill
+* `isThrill===False` returns the corresponding single note position
 ### Func `choose`
-
+When the function `choose(thrill, type, typeString)` is runned it rules the type of trill: `SUP1`,`SUP2`,`INF1` or `INF2`. 
 
 
 ## PENTACAZZI
