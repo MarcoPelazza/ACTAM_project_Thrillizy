@@ -153,7 +153,7 @@ This part of the script is responsible for adding and removing permanent ledger 
 The function first calls `rimuoviTagliAddizionaliPermanenti()` to remove any existing permanent ledger lines from the SVG.
 
 Constants x1 and x2 define the starting and ending x-coordinates for the ledger lines.
-If the provided y-coordinate (y) is below the starting y-coordinate of the staff (`startY`), additional ledger lines are added above the staff to accommodate lower notes.
+If the provided y-coordinate (`y`) is below the starting y-coordinate of the staff (`startY`), additional ledger lines are added above the staff to accommodate lower notes.
 
 If the provided y-coordinate is above the upper limit of the staff (beyond 4 times the line spacing), additional ledger lines are added below the staff to accommodate higher notes.
 
