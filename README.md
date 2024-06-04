@@ -120,7 +120,7 @@ It also checks if there is an existing note (nota) and removes it to ensure that
 - The `cy` attribute (y-coordinate) is set to y, positioning the note at the provided y-coordinate.
 - The `r` attribute is set to 10, giving the note a radius of 10 units.
 
-The newly created note element is appended to the SVG element and the variable notaMusicale is assigned the musical note corresponding to the y-coordinate from the noteMap object. 
+The newly created note element is appended to the SVG element and the variable `notaMusicale` is assigned the musical note corresponding to the y-coordinate from the `noteMap` object. 
 
 ### Handling accidental notes
 
@@ -130,7 +130,7 @@ This section of the code is responsible for handling accidental notes (sharps an
 
 #### Description
 
-The condition if (bottonePremuto && notaAccidentale) checks if the button is pressed and an accidental note (either sharp or flat) is specified.
+The condition `if (bottonePremuto && notaAccidentale)` checks if the button is pressed and an accidental note (either sharp or flat) is specified.
 
 `let stringControl = notaMusicale[0];` extracts the first character of the musical note, representing the base note.
 
@@ -153,7 +153,7 @@ This part of the script is responsible for adding and removing permanent ledger 
 The function first calls `rimuoviTagliAddizionaliPermanenti()` to remove any existing permanent ledger lines from the SVG.
 
 Constants x1 and x2 define the starting and ending x-coordinates for the ledger lines.
-If the provided y-coordinate (y) is below the starting y-coordinate of the staff (startY), additional ledger lines are added above the staff to accommodate lower notes.
+If the provided y-coordinate (y) is below the starting y-coordinate of the staff (`startY`), additional ledger lines are added above the staff to accommodate lower notes.
 
 If the provided y-coordinate is above the upper limit of the staff (beyond 4 times the line spacing), additional ledger lines are added below the staff to accommodate higher notes.
 
@@ -163,16 +163,16 @@ After removing all lines, the `tagliAddizionaliPermanenti` array is cleared, ens
 
 ### Function `conversion`
 
-The `conversion` function is responsible for converting a given musical note to its enharmonic equivalent, considering any sharps or flats present in the note. It utilizes a predefined array of musical notes (noteArray) for reference.
+The `conversion` function is responsible for converting a given musical note to its enharmonic equivalent, considering any sharps or flats present in the note. It utilizes a predefined array of musical notes (`noteArray`) for reference.
 
 ![Alt text](Pentacazzi/conversion.png)
 
 #### Description
 
 The function initializes the conversion variable with the input `notaMusicale`, assuming no conversion is needed initially.
-It extracts the first two characters of the input note and stores it in the str variable.
+It extracts the first two characters of the input note and stores it in the `str` variable.
 
-If the input note contains a sharp (♯), it iterates over the noteArray to find the corresponding note.
+If the input note contains a sharp (♯), it iterates over the `noteArray` to find the corresponding note.
 
 When a match is found, it assigns the enharmonic equivalent note with a flat (♭) to the conversion variable.
 The loop breaks as soon as a match is found.
