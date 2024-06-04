@@ -70,6 +70,41 @@ This function handles the rendering of a note on a musical staff, ensuring that 
 
 ![Alt text](Pentacazzi/aggiungiNota1.png)
 
+The noteMap 
+
+## Parameters and description
+
+Parameters:
+
+- x (Number) -> The x-coordinate for the position where the note will be placed on the SVG element.
+- y (Number) -> The y-coordinate for the position where the note will be placed on the SVG element.
+
+Descriptions:
+
+The function starts by checking if there are any existing accidental symbols (like sharps or flats) represented by elements with the class accidental within the SVG. If found, it removes them.
+It also checks if there is an existing note (nota) and removes it to ensure that only the most recent note is displayed.
+
+A new SVG circle element is created to represent the musical note.
+
+The cx attribute (x-coordinate) is set to x + 150, which positions the note 150 units to the right of the provided x coordinate.
+
+The cy attribute (y-coordinate) is set to y, positioning the note at the provided y-coordinate.
+
+The r attribute is set to 10, giving the note a radius of 10 units.
+
+The newly created note element is appended to the SVG element.
+
+The variable notaMusicale is assigned the musical note corresponding to the y-coordinate from the noteMap object. 
+
+![Alt text](Pentacazzi/aggiungiNota2.png)
+If no matching note is found, it defaults to 'Unknown'.
+
+### Handling accidental notes
+
+This section of the code is responsible for handling accidental notes (sharps and flats) when a button is pressed `(bottonePremuto)` and an accidental note `(notaAccidentale)` is specified. It updates the musical note with the accidental and displays it on the SVG element.
+
+
+
 
 
 
