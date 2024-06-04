@@ -116,11 +116,11 @@ Descriptions:
 
 The function starts by checking if there are any existing accidental symbols (like sharps or flats) represented by elements with the class accidental within the SVG. If found, it removes them.
 It also checks if there is an existing note (nota) and removes it to ensure that only the most recent note is displayed.
-The cx attribute (x-coordinate) is set to x + 150, which positions the note 150 units to the right of the provided x coordinate.
-The cy attribute (y-coordinate) is set to y, positioning the note at the provided y-coordinate.
-The r attribute is set to 10, giving the note a radius of 10 units.
-The newly created note element is appended to the SVG element.
-The variable notaMusicale is assigned the musical note corresponding to the y-coordinate from the noteMap object. 
+- The cx attribute (x-coordinate) is set to x + 150, which positions the note 150 units to the right of the provided x coordinate.
+- The cy attribute (y-coordinate) is set to y, positioning the note at the provided y-coordinate.
+- The r attribute is set to 10, giving the note a radius of 10 units.
+
+The newly created note element is appended to the SVG element and the variable notaMusicale is assigned the musical note corresponding to the y-coordinate from the noteMap object. 
 
 ### Handling accidental notes
 
