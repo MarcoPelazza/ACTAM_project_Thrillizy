@@ -165,7 +165,11 @@ After removing all lines, the tagliAddizionaliPermanenti array is cleared, ensur
 
 The `conversion` function is responsible for converting a given musical note to its enharmonic equivalent, considering any sharps or flats present in the note. It utilizes a predefined array of musical notes (noteArray) for reference.
 
-![Alt text](Pentacazzi/img4.png)
+![Alt text](Pentacazzi/conversion.png)
+
+#### Description
+
+
 
 
 
