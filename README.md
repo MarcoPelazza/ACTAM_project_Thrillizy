@@ -116,7 +116,7 @@ When the function `run(index,isThrill, sup1, sup2, inf1, inf2)` is runned there 
 
 ![Alt text](Pentacazzi/choose.png)
 
-When the function `choose(thrill, type, typeString)` is runned it rules the type of trill: `SUP1`,`SUP2`,`INF1` or `INF2`. 
+When the function `choose(thrill, type, typeString)` is runned it rules the type of thrill: `SUP1`,`SUP2`,`INF1` or `INF2`. 
 
 `tunerStartStop('thrill')` -> This function terminates the tuner and launches the `run`.
 
