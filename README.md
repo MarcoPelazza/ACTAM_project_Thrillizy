@@ -149,11 +149,6 @@ The `stopAudioContext` function is responsible for stopping the audio context, c
 
 ![Alt text](Pentacazzi/StopTun.png)
 
-### Function `getColor`
-
-The `getColor` function calculates and returns a hexadecimal color based on the provided value.
-
-![Alt text](Pentacazzi/Convert.png)
 
 
 ## Script.js
