@@ -1,0 +1,41 @@
+.container{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 205px 1fr 1fr 1fr;
+    position: relative;
+}
+
+.flauto{
+    grid-area: 1/1/-1/2;
+}
+
+.pentagramma{
+   
+    grid-area: 1/2/2/2;
+}
+
+.radio{
+    display: flex;
+    flex-direction: column;
+    grid-area: 1/3/2/3;
+    justify-content: center;
+}
+.trilli{
+    display: flex;
+    flex-direction: column;
+    grid-area: 2/2/3/2;
+    justify-content: center;
+}
+.containerAccordatore{
+    display: flex;
+    flex-direction: column;
+    grid-area: 2/3/3/4;
+    justify-content: center;
+}
+
+.istruzioni{
+    display: flex;
+    flex-direction: column;
+    grid-area: 1/4/-1/-1;
+    justify-content: center;
+}

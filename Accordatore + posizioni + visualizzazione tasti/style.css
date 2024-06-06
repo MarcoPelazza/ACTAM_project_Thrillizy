@@ -30,35 +30,26 @@ td{
 
 .fluteContainer{
     position: absolute;
-    top: 0%;
-    left: 0%;
+    margin-top: auto;
+    margin-left: auto;
 }
 
 .pentagrammaContainer{
     position: absolute;
-    top: 5%;
+    top: 0px;
     right: 5%;
-}
-
-.button-container{
-    position: absolute;
-    margin-top: 9%;
-    left:0%;
-    border-color: blue;
 }
 
 #audioSection{
     position:absolute;
     left:22%;
     top:5%
-
 }
 
 #buttons{
-    position: absolute;
     left: 10%;
     top: 5%;
-    background-image: url('RADICA-DI-OLMO-90.jpg');
+    background-color:#291f1e;
     z-index: 1;
     height: 262px;
     border-radius: 20px;
@@ -68,17 +59,16 @@ td{
 }
 
 .Accordatore{
-    position: absolute;
-    top: 5%;
-    left: 30%;
-    background-image: url('RADICA-DI-OLMO.jpg');
+    position: relative;
+    top: 0%;
+    left: 0%;
+    background-color: #291f1e;
     z-index: 1;
     border-radius: 20px;
     border-width: 5px;
     border-style: ridge;
     border-color: #888;
-
-       
+        
 
 }
 #TunerNote{
@@ -86,11 +76,12 @@ td{
     bottom: 12%;
     width: 20%;
     height: 15%;
-    left: 8%;
+    left: 12%;
     border-radius: 10%;
 }
+
 #TunerScreen{
-    position:absolute;
+    position: absolute;
     transform: scale(1.8);
     left: 25%;
     bottom: 25%;
@@ -123,10 +114,10 @@ button{
     border-style:outset;
     border-width:7px;
     border-radius: 7px;
-    border-color: #E3B505;
-    background-color: #E3B505;
+    border-color: #19535F;
+    background-color: #19535F;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #074F57;
+    color: #FFFFFF;
     font-style:italic;
     font-size:large;
     font-weight:bold;
@@ -136,8 +127,8 @@ button{
 
 
 button:hover{
-    background-color: salmon;
-    border-color: salmon;
+    background-color: #863459;
+    border-color: #863459;
 }
 
 
@@ -198,6 +189,7 @@ body {
 .pentagramma {
     stroke: black;
     stroke-width: 1;
+    left: 20%;
 }
 .note {
     fill: black;
@@ -218,8 +210,8 @@ body {
 }
 .button-container {
     position: absolute;
-    top: 15%;
-    left: 2%;
+    /*top: 15%;
+    left: 2%;*/
     display: flex; /* Assicurati che i pulsanti siano in una riga */
 }
 

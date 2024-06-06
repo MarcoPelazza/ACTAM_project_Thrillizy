@@ -5,7 +5,7 @@ const svg = document.getElementById('svgKeys');
 
 //image and svg resizing
 img.style.resize='vertical';
-img.height = window.innerHeight;
+img.height = window.innerHeight -35;
 H = img.height;
 W = img.width;
 
@@ -1025,10 +1025,7 @@ function playThisAudio(){
 function choose(thrill, type, typeString){
     console.log("Napoli")
     
-    /*sup1_button.style.backgroundColor = "";
-    sup2_button.style.backgroundColor = "";
-    inf1_button.style.backgroundColor = "";
-    inf2_button.style.backgroundColor = "";*/
+
     pressButton(sup1_button, false);
     pressButton(sup2_button, false);
     pressButton(inf1_button, false);
@@ -1077,11 +1074,6 @@ function choose(thrill, type, typeString){
 
     if(isthrill){
         trillo_button.src='toggle_switch_on.png';
-        
-        /*if(sup1){sup1_button.style.backgroundColor = "red"};
-        if(sup2){sup2_button.style.backgroundColor = "red"};
-        if(inf1){inf1_button.style.backgroundColor = "red"};
-        if(inf2){inf2_button.style.backgroundColor = "red"};*/
 
         
     }else{trillo_button.src='toggle_switch_off.png';} 
@@ -1109,14 +1101,14 @@ function startProcessing(NoteStringSelected = ''){
 
 function pressButton (button, val){
     if(val){
-        button.style.backgroundColor = '#C84C09';
-        button.style.borderColor = '#C84C09';
+        button.style.backgroundColor = '#89023E';
+        button.style.borderColor = '#89023E';
         button.style.borderStyle = 'inset';
         button.disabled = false;
     }else{
         console.log('devediventaregiallooo');
-        button.style.backgroundColor = '#E3B505';
-        button.style.borderColor = '#E3B505';
+        button.style.backgroundColor = '#19535F';
+        button.style.borderColor = '#19535F';
         button.style.borderStyle = 'outset';
         button.disabled = false;
     }
@@ -1124,8 +1116,8 @@ function pressButton (button, val){
 
 function deactivateButton(button, val){
     if(val){
-        button.style.backgroundColor = '#E3B505';
-        button.style.borderColor = '#E3B505';
+        button.style.backgroundColor = '#19535F';
+        button.style.borderColor = '#19535F';
         button.style.borderStyle = 'outset';
     }else{
         button.style.backgroundColor = '#888';
