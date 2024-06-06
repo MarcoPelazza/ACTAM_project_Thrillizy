@@ -69,9 +69,9 @@ You can obviously listen to the correct execution of each trill, by pressing the
 
 This project is composed of one HTML file, one CSS file and four JavaScript files:
 
-* `Script_accordatore.js`: is the management of the tuner.
-* `Script.js`: is the management of the staff.
-* `Script_agg_aprile.js`: è lo script principale che collega posizioni e suoni.
+* `tuner.js`: is the management of the tuner.
+* `staff.js`: is the management of the staff.
+* `positions.js`: è lo script principale che collega posizioni e suoni.
 * `yin.js`: it is a library used for fundamental frequency recognition.
 
 
