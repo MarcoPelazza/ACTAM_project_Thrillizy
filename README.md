@@ -188,15 +188,6 @@ This function handles the rendering of a note on a musical staff, ensuring that 
 
 ![Alt text](Pentacazzi/aggiungiNota1.png)
 
-#### Parameters and description
-
-Parameters:
-
-- x (Number) -> The x-coordinate for the position where the note will be placed on the SVG element.
-- y (Number) -> The y-coordinate for the position where the note will be placed on the SVG element.
-
-Descriptions:
-
 The function starts by checking if there are any existing accidental symbols (like sharps or flats) represented by elements with the class accidental within the SVG. If found, it removes them.
 It also checks if there is an existing note (nota) and removes it to ensure that only the most recent note is displayed.
 - The `cx` attribute (x-coordinate) is set to x + 150, which positions the note 150 units to the right of the provided x coordinate.
@@ -210,8 +201,6 @@ The newly created note element is appended to the SVG element and the variable `
 This section of the code is responsible for handling accidental notes (sharps and flats) when a button is pressed (`bottonePremuto`) and an accidental note (`notaAccidentale`) is specified. It updates the musical note with the accidental and displays it on the SVG element.
 
 ![Alt text](Pentacazzi/handlingAcc.png)
-
-#### Description
 
 The condition `if (bottonePremuto && notaAccidentale)` checks if the button is pressed and an accidental note (either sharp or flat) is specified.
 
@@ -231,8 +220,6 @@ This part of the script is responsible for adding and removing permanent ledger 
 
 ![Alt text](Pentacazzi/img4.png)
 
-#### Description
-
 The function first calls `rimuoviTagliAddizionaliPermanenti()` to remove any existing permanent ledger lines from the SVG.
 
 Constants x1 and x2 define the starting and ending x-coordinates for the ledger lines.
@@ -249,8 +236,6 @@ After removing all lines, the `tagliAddizionaliPermanenti` array is cleared, ens
 The `conversion` function is responsible for converting a given musical note to its enharmonic equivalent, considering any sharps or flats present in the note. It utilizes a predefined array of musical notes (`noteArray`) for reference.
 
 ![Alt text](Pentacazzi/conversion.png)
-
-#### Description
 
 The function initializes the conversion variable with the input `notaMusicale`, assuming no conversion is needed initially.
 It extracts the first two characters of the input note and stores it in the `str` variable.
