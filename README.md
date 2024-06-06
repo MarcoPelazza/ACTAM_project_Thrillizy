@@ -129,6 +129,19 @@ The `initAudioContext` function initializes the audio context and sets up microp
 
 ![Alt text](Pentacazzi/audioCont.png)
 
+It requests access to the user's microphone using `navigator.mediaDevices.getUserMedia`.
+Upon successful permission, it initializes the microphone as a media stream source.
+
+A low-pass filter is created using `createBiquadFilter`, and its type is set to 'lowpass'.
+The filter's frequency is set to 1000 Hz.
+
+An analyser node is created using `createAnalyser`.
+Its FFT size is set to `8192` for frequency analysis, and minimum decibels are set to `-90`.
+
+The microphone input is connected to the low-pass filter, and the filter is connected to the analyser.
+
+
+
 ### Function: `getFrequency`
 
 The `getFrequency` function is responsible for retrieving the frequency data from the microphone input and performing real-time frequency analysis to determine the current pitch. It then updates the UI elements based on the detected pitch.
