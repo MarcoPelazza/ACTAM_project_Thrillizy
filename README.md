@@ -79,7 +79,7 @@ This project is composed of one HTML file (`index.html`), one CSS file (`style.c
 
 ## positions.js
 
-### Class: `Position
+### Class: `Position`
 The `Position` class represents a musical position, containing information about the note, the frets involved, and a numerical identifier. 
 
 ![Alt text](staffImages/classPosition.png)
