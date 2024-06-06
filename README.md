@@ -67,7 +67,7 @@ You can obviously listen to the correct execution of each trill, by pressing the
 <img src="staffImages/Flowcharts.png"  width="700" height="500">
 
 
-This project is composed of one HTML file, one CSS file and four JavaScript files:
+This project is composed of one HTML file (`index.html`), one CSS file (`style.css`) and four JavaScript files:
 
 * `tuner.js`: is the management of the tuner.
 * `staff.js`: is the management of the staff.
