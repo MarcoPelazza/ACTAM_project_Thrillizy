@@ -148,6 +148,15 @@ The `getFrequency` function is responsible for retrieving the frequency data fro
 
 ![Alt text](Pentacazzi/freq.png)
 
+The function first checks if setTuner is true before proceeding with frequency analysis.
+It retrieves frequency data from the microphone input using `analyser.getFloatTimeDomainData`.
+
+Frequency is calculated using the `window.yin` function with the frequency data and the sample rate of the audio context.
+
+The function calculates differences between the target note and the detected frequency using `handleNoteDifferences`.
+
+
+
 `const frequencyToNoteDB` -> This array is a correspondence table between frequencies and musical notes. Each element of the array is a sub-array containing the name of the note and its corresponding frequency in hertz.
 
 ### Function: `handleNoteDifferences`
@@ -155,6 +164,12 @@ The `getFrequency` function is responsible for retrieving the frequency data fro
 The `handleNoteDifferences` function calculates the difference between the detected frequency and the target note, determining whether the detected frequency is lower or higher than the target note and computing the difference in cents accordingly.
 
 ![Alt text](Pentacazzi/handleNote.png)
+
+The function determines the notes before and after the target note based on its index in the `frequencyToNoteDB` array.
+Based on the comparison between the detected frequency and the neighboring notes, the function determines whether the detected frequency is lower or higher than the target note.
+
+The function returns an array containing the cent difference and the state string ('LOW' or 'HIGH').
+
 
 ### Function: `stopAudioContext`
 
