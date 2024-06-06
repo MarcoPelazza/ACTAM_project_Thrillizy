@@ -303,6 +303,10 @@ Another challenge was recording all the sounds and trills with perfectly tuned p
 
 ### Panettieri
 
+I believe the most complex part encountered during the implementation of the staff was the creation of the additional ledger lines. I had never attempted anything like this before, so I had to study the range limits since the flute is an instrument that spans from C3 to C6, and develop our staff accordingly. 
+
+Another complicated part was the linking and communication to ensure that the note entered was read correctly between the staff and the other components of the project.
+
 
 ### Pelazza
 
