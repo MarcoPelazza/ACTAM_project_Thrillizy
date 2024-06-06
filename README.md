@@ -293,62 +293,32 @@ It is important to emphasise, for the reasons mentioned above, how some `label` 
 
 ### Baldini
 
-The main difficulty I had during the development of this project was to find the best melody and note architecture in order to implement the features we had in mind.\
-At first, the code allowed to play only singular-note melodies, then we added chords (but only with the same duration for all notes).\
-So, in order to allow the user to add notes of any duration in any time position, I implemented a midi-like representation with the use of a starting time instant (both in tatum-wise terms and in milliseconds).\
-Finally, to make the sequence computation time lower, the code I wrote creates a `sorted_data` array and use the recursive calling logic to schedule the next note to be played.
-In `sorted_data` all the notes of the melody are sorted by starting time reference (from first to last notes) and all simultaneous notes are clustered together (notes that start at the same time constitutes a multiple-elements array inside `sorted_data`).
 
-Regarding the resulting sounds, the sound quality was another challenge I wanted to deal with.\
-The use of low-level functionalities and elements allowed us to write faster code, but didn't lead to very pleasant sounds.
-So I tried to develop a more intricate sound processing chain, including compressors, delay and reverb, and tried to resemble a professional-like sound synthesis by using an additive synthesis technique instead of using a single oscillators.
 
 ### Cagnetta
 
-From the point of view of the layout, I believe that the most significant challenge found was to represent and position all the elements in a coherent way with the idea proposed initially.
-It was not easy above all to stack the different elements (buttons, leds...); this has brought various changes during the development but we can consider ourselves satisfied with the final version obtained.
+From my point of view, the most complicated task was encoding in binary code all the positions of the individual notes and for each note the various trills. The positions shown were chosen to provide all possible options for alternate fingerings for those learning to play the flute. 
+
+Another challenge was recording all the sounds and trills with perfectly tuned pitch, so that users would have a reliable reference to guide their practice.
 
 ### Panettieri
 
-My personal challenges dealt with JavaScript functionalities that weren't seen during lectures or just briefly discussed.\
-The functionalities I struggled with were: `Blob` object, `FileReader` object and asynchronous functions.\
-I managed to overcome the challenges related to `Blob` and `FileReader` objects with a lot of "die-and-retry" logic, YoutTube tutorials and with the help of code snippets delivered by ChatGPT. \
-I must thank OpenAI for developing ChatGPT as it was a great tool to quickly obtain code snippets, showing basic uses and writing rules for those functionalities.\
-They allowed me to quickly grasp an idea of how to handle and declare such tools, which eventually saved me a lot of time.
-I was also able to save a lot of time thanks to the AI Copilot that we were shown during the lectures.
-It helped me remember variables, specifities of our program...
-It is a great tool that I'll keep using throughout my life.\
-However, I must say that extra carefulness is required when using such tools as errors are frequent. 
-Using them should never undermine the developer's mind and our thirst of "Do It Yourself".
-Instead, they should be considered as sidekicks, helping us facing logic issues or tough challenges.
 
 ### Pelazza
 
 ## Credits
 
-### Di Lorenzo
+### Baldini
 
-I found this project development as an opportunity to put myself on the line (it was my very first serious coding project) and to start learning important soft skills, imposing myself to create a work-like professional workflow.
-This process was easily simplified by working with my colleagues Nicola and Ernest, because we all managed to create a balanced, organized and enthusiastic work environment, hopefully leading to other chances of working together.
+### Cagnetta
 
-### Mugnaini
+I am truly satisfied with the final result of this project. It stemmed from a need that I encountered on several occasions during my studies as a flutist, and the fact that I can offer this project as an opportunity to future flutists makes me very proud. 
 
-At the conclusion of this project, I would like to thank my colleagues Giuliano and Ernest for the professionalism, dedication and commitment they showed and for conveying a part of themselves within each hour spent at work.\
-It is not easy to find people who are so close to one's ideas and for this reason I consider myself very lucky.\
-Moreover, this work has given us the opportunity to establish a friendship beyond the working relationship, for which I am extremely grateful.
+I am extremely grateful to my team, who believed in this idea from the very beginning and without whom this project would never have been realized.
 
-### Ouali
-
-My biggest pride, even if I had no particuliarly tough challenge implementing it, was developing the grid interaction for our sequence.
-Coding it felt like a game, such as debugging.
-I really had a great time turning my ideas into working code.\
-Moreover, I deeply appreciated working with Giuliano and Nicola.
-Thanks to this project, I was able to know them better and a great friendship was born from this project.
-I highly consider their seriousness and rigor.
-We had a lot of meeting for this project, starting mid-October until the end of December.
-We were extremely well organised as Giuliano's milestone checklist really helped us prioritizing features implementation.\
-All of us were proactive on our group chat for checking the evolution of our project, showing that each one of us was extremely motivated for the project development.
-In my academic experience, it is the first time that I got the chance to work with such reliable people.
+Thank you for all the late-night study sessions, dinners, discussions, and suggestions for mutual improvement. It has been a pleasure working with you, and I hope this will be the first of many projects we develop together.
+### Panettieri
+### Pelazza
 
 ---
 
