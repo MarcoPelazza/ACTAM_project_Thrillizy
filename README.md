@@ -63,9 +63,8 @@ You can obviously listen to the correct execution of each trill, by pressing the
 ## How Does It Work?
 ### Block diagram
 
-![Small Image](staffImages/Flowcharts.png)
 
-<img src="staffImages/Flowcharts.png"  width="100" height="100">
+<img src="staffImages/Flowcharts.png"  width="700" height="500">
 
 
 This project is composed of one HTML file, one CSS file and four JavaScript files:
