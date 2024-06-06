@@ -136,7 +136,7 @@ The `initAudioContext` function initializes the audio context and sets up microp
 It requests access to the user's microphone using `navigator.mediaDevices.getUserMedia`.
 Upon successful permission, it initializes the microphone as a media stream source.
 
-A low-pass filter is created using `createBiquadFilter`, and its type is set to 'lowpass'.
+A low-pass filter is created using `createBiquadFilter`, and its type is set to `lowpass`.
 The filter's frequency is set to 1000 Hz.
 
 An analyser node is created using `createAnalyser`.
