@@ -63,6 +63,8 @@ You can obviously listen to the correct execution of each trill, by pressing the
 ## How Does It Work?
 ### Block diagram
 
+![Alt text](staffImages/Flowcharts.png)
+
 This project is composed of one HTML file, one CSS file and four JavaScript files:
 
 * `Script_accordatore.js`: is the management of the tuner.
