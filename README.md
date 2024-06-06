@@ -74,7 +74,7 @@ This project is composed of one HTML file, one CSS file and four JavaScript file
 
 ## Script_agg_aprile
 
-### Position class
+### Class: `Position
 The `Position` class represents a musical position, containing information about the note, the frets involved, and a numerical identifier. 
 
 ![Alt text](Pentacazzi/classPosition.png)
@@ -90,8 +90,8 @@ For each attribute `Getter` methods are created. The `getBinaryFrets()` returns 
 
 The `Position` class encapsulates the concept of a musical position, providing methods to access and manipulate the note, frets, and associated numerical identifier. The class also offers functionality to convert the frets into a binary format and print detailed information about the position.
 
-### Thrills of note
-This class associates the note to its relative trill and memorize the information relatives to the correspondent trill.
+### Class: `ThrillsOfNote`
+The `ThrillsOfNote` class represents the thrills associated with a musical note, containing information about various fret positions and their corresponding notes.
 
 ![Alt text](Pentacazzi/getThrills.png)
 
@@ -105,28 +105,28 @@ The `positionAlterationManager()` method manages the eventual alterations of the
 
 ![Alt text](Pentacazzi/posManager.png)
 
-### Const `position`
+### Const: `position`
 This constant is an array of arrays which contains all the notes positions
-### Const `th`
+### Const: `th`
 This is an object `JSON` which contains all the information about trills.
-### Function `run`
+### Function: `run`
+
+The `run` function determines whether to generate a thrill or a single note based on the `isthrill` parameter. If it is true, it generates a thrill based on the specified superior (`sup1`, `sup2`) or inferior (`inf1`, `inf2`) flags. Otherwise, it generates a single note.
 
 ![Alt text](Pentacazzi/run.png)
 
 When the function `run(index,isThrill, sup1, sup2, inf1, inf2)` is runned there are two possible results:
 * `isThrill===True` returns the trill
 * `isThrill===False` returns the corresponding single note position
-### Function `choose`
+
+### Function: `choose`
+
+The `choose` function updates the state of thrill selection, toggles the thrill mode, and updates the background color of the related buttons. It then calls the `run` function to generate the selected note or thrill and starts or stops the tuner based on the current state.
 
 ![Alt text](Pentacazzi/choose.png)
-
-When the function `choose(thrill, type, typeString)` is runned it rules the type of thrill: `SUP1`,`SUP2`,`INF1` or `INF2`. 
-
-![Alt text](Pentacazzi/tunStaSto.png)
-
-`tunerStartStop('thrill')` -> This function (from the `script_accordatore.js`) terminates the tuner and launches the `run`. 
-
+ 
 ## Script_accordatore.js
+
 ### Function: `initAudioContext`
 
 The `initAudioContext` function initializes the audio context and sets up microphone input with filtering and analysis capabilities.
