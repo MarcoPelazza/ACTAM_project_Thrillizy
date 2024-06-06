@@ -77,7 +77,7 @@ This project is composed of one HTML file, one CSS file and four JavaScript file
 ### Class: `Position
 The `Position` class represents a musical position, containing information about the note, the frets involved, and a numerical identifier. 
 
-![Alt text](Pentacazzi/classPosition.png)
+![Alt text](staffImages/classPosition.png)
 
 It's equipped by a constructor which initialises 3 attributes:
 * `getNote`: Returns the note associated with the position.
@@ -93,7 +93,7 @@ The `Position` class encapsulates the concept of a musical position, providing m
 ### Class: `ThrillsOfNote`
 The `ThrillsOfNote` class represents the thrills associated with a musical note, containing information about various fret positions and their corresponding notes.
 
-![Alt text](Pentacazzi/getThrills.png)
+![Alt text](staffImages/getThrills.png)
 
 It's initialized by the constructor with the following attributes:
 * `this.position`: it's an object of the `Position` class of the corresponding note
@@ -103,7 +103,7 @@ The `getThrills()` method returns the complete trill.
 
 The `positionAlterationManager()` method manages the eventual alterations of the corresponding trill position.
 
-![Alt text](Pentacazzi/posManager.png)
+![Alt text](staffImages/posManager.png)
 
 ### Const: `position`
 This constant is an array of arrays which contains all the notes positions
@@ -113,7 +113,7 @@ This is an object `JSON` which contains all the information about trills.
 
 The `run` function determines whether to generate a thrill or a single note based on the `isthrill` parameter. If it is true, it generates a thrill based on the specified superior (`sup1`, `sup2`) or inferior (`inf1`, `inf2`) flags. Otherwise, it generates a single note.
 
-![Alt text](Pentacazzi/run.png)
+![Alt text](staffImages/run.png)
 
 When the function `run(index,isThrill, sup1, sup2, inf1, inf2)` is runned there are two possible results:
 * `isThrill===True` returns the trill
@@ -123,7 +123,7 @@ When the function `run(index,isThrill, sup1, sup2, inf1, inf2)` is runned there 
 
 The `choose` function updates the state of thrill selection, toggles the thrill mode, and updates the background color of the related buttons. It then calls the `run` function to generate the selected note or thrill and starts or stops the tuner based on the current state.
 
-![Alt text](Pentacazzi/choose.png)
+![Alt text](staffImages/choose.png)
  
 ## Script_accordatore.js
 
@@ -131,7 +131,7 @@ The `choose` function updates the state of thrill selection, toggles the thrill 
 
 The `initAudioContext` function initializes the audio context and sets up microphone input with filtering and analysis capabilities.
 
-![Alt text](Pentacazzi/audioCont.png)
+![Alt text](staffImages/audioCont.png)
 
 It requests access to the user's microphone using `navigator.mediaDevices.getUserMedia`.
 Upon successful permission, it initializes the microphone as a media stream source.
@@ -150,7 +150,7 @@ The microphone input is connected to the low-pass filter, and the filter is conn
 
 The `getFrequency` function is responsible for retrieving the frequency data from the microphone input and performing real-time frequency analysis to determine the current pitch. It then updates the UI elements based on the detected pitch.
 
-![Alt text](Pentacazzi/freq.png)
+![Alt text](staffImages/freq.png)
 
 The function first checks if setTuner is true before proceeding with frequency analysis.
 It retrieves frequency data from the microphone input using `analyser.getFloatTimeDomainData`.
@@ -167,7 +167,7 @@ The function calculates differences between the target note and the detected fre
 
 The `handleNoteDifferences` function calculates the difference between the detected frequency and the target note, determining whether the detected frequency is lower or higher than the target note and computing the difference in cents accordingly.
 
-![Alt text](Pentacazzi/handleNote.png)
+![Alt text](staffImages/handleNote.png)
 
 The function determines the notes before and after the target note based on its index in the `frequencyToNoteDB` array.
 Based on the comparison between the detected frequency and the neighboring notes, the function determines whether the detected frequency is lower or higher than the target note.
@@ -179,7 +179,7 @@ The function returns an array containing the cent difference and the state strin
 
 The `stopAudioContext` function is responsible for stopping the audio context, clearing the frequency interval, and releasing any active media streams associated with microphone input.
 
-![Alt text](Pentacazzi/StopTun.png)
+![Alt text](staffImages/StopTun.png)
 
 
 
@@ -190,7 +190,7 @@ The `aggiungiNota` function is designed to add a musical note representation to 
 
 This function handles the rendering of a note on a musical staff, ensuring that any previous accidental symbols or notes are removed before adding the new note.
 
-![Alt text](Pentacazzi/aggiungiNota1.png)
+![Alt text](staffImages/aggiungiNota1.png)
 
 The function starts by checking if there are any existing accidental symbols (like sharps or flats) represented by elements with the class accidental within the SVG. If found, it removes them.
 It also checks if there is an existing note (nota) and removes it to ensure that only the most recent note is displayed.
@@ -204,7 +204,7 @@ The newly created note element is appended to the SVG element and the variable `
 
 This section of the code is responsible for handling accidental notes (sharps and flats) when a button is pressed (`bottonePremuto`) and an accidental note (`notaAccidentale`) is specified. It updates the musical note with the accidental and displays it on the SVG element.
 
-![Alt text](Pentacazzi/handlingAcc.png)
+![Alt text](staffImages/handlingAcc.png)
 
 The condition `if (bottonePremuto && notaAccidentale)` checks if the button is pressed and an accidental note (either sharp or flat) is specified.
 
@@ -222,7 +222,7 @@ If the accidental note is a sharp (♯) and the base note is not 'B' or 'E', the
 
 This part of the script is responsible for adding and removing permanent ledger lines to the musical staff based on the provided y-coordinate. It ensures that additional ledger lines are added or removed dynamically to accommodate notes outside the standard staff range.
 
-![Alt text](Pentacazzi/img4.png)
+![Alt text](staffImages/img4.png)
 
 The function first calls `rimuoviTagliAddizionaliPermanenti()` to remove any existing permanent ledger lines from the SVG.
 
@@ -239,7 +239,7 @@ After removing all lines, the `tagliAddizionaliPermanenti` array is cleared, ens
 
 The `conversion` function is responsible for converting a given musical note to its enharmonic equivalent, considering any sharps or flats present in the note. It utilizes a predefined array of musical notes (`noteArray`) for reference.
 
-![Alt text](Pentacazzi/conversion.png)
+![Alt text](staffImages/conversion.png)
 
 The function initializes the conversion variable with the input `notaMusicale`, assuming no conversion is needed initially.
 It extracts the first two characters of the input note and stores it in the `str` variable.
