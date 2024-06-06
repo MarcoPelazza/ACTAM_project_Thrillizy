@@ -72,7 +72,7 @@ This project is composed of one HTML file, one CSS file and four JavaScript file
 
 
 
-## Script_agg_aprile
+## positions.js
 
 ### Class: `Position
 The `Position` class represents a musical position, containing information about the note, the frets involved, and a numerical identifier. 
@@ -125,7 +125,7 @@ The `choose` function updates the state of thrill selection, toggles the thrill 
 
 ![Alt text](staffImages/choose.png)
  
-## Script_accordatore.js
+## tuner.js
 
 ### Function: `initAudioContext`
 
@@ -183,7 +183,7 @@ The `stopAudioContext` function is responsible for stopping the audio context, c
 
 
 
-## Script.js
+## staff.js
 ### Function `aggiungiNota`
 
 The `aggiungiNota` function is designed to add a musical note representation to an SVG element at a specified position. 
