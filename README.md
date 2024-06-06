@@ -65,6 +65,9 @@ You can obviously listen to the correct execution of each trill, by pressing the
 
 ![Small Image](staffImages/Flowcharts.png)
 
+<img src="staffImages/Flowcharts.png"  width="100" height="100">
+
+
 This project is composed of one HTML file, one CSS file and four JavaScript files:
 
 * `Script_accordatore.js`: is the management of the tuner.
