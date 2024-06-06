@@ -258,27 +258,6 @@ If the input note contains a flat (♭), it directly assigns the input note with
 
 The function returns the converted note.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## GiulianoGianni
-
-
-
-
-
-
 ### Layout Design
 
 In the course of this project development, various layout models were implemented.
@@ -291,7 +270,6 @@ Furthermore, it can be seen how the use of colours makes the whole webpage more 
 CSS provided the opportunity to work from a purely graphical point of view, with the choice of dimensions, contours, actual positioning and colours of the various elements.
 The focus was to have the most compact graphics possible, as well as a clear and intuitive interface, to be easily used during the composition of the sequence.\
 It is important to emphasise, for the reasons mentioned above, how some `label` elements were inserted precisely to make it easier to use and free of misunderstandings.
-
 
 
 ## Challenges Encountered
