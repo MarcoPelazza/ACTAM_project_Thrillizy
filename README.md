@@ -9,6 +9,8 @@ This project is the result of a team work for the course _Advanced Coding Tools 
 
 ## How Can I Use It?
 
+METTERE SCREEN INTERFACCIA
+
 The graphic interface allows you to insert notes on the staff, giving you the possibility of choosing whether the note is altered or not and then the relative flute position will appear on the display. Moreover, it's also possible to listen the right sound of that note and verify if the note played by the flutist is correct or not, through a tuner connected to the microphone.
 
 ### Video DEMO
