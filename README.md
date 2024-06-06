@@ -73,19 +73,23 @@ This project is composed of one HTML file, one CSS file and four JavaScript file
 
 
 ## Script_agg_aprile
+
 ### Position class
-The class called `Position(note, frets, number)` is the class utilized for the elaboration of the positions of the single notes. 
+The `Position` class represents a musical position, containing information about the note, the frets involved, and a numerical identifier. 
 
 ![Alt text](Pentacazzi/classPosition.png)
 
 It's equipped by a constructor which initialises 3 attributes:
-* `getNote`: it's the correspondent note
-* `getFrets`: it's the position relative to the note
-* `getNumber`: it's the code associated to the note
+* `getNote`: Returns the note associated with the position.
+* `getFrets`: Returns the frets associated with the position.
+* `getNumber`: Returns the numerical identifier of the position.
 
 For each attribute `Getter` methods are created. The `getBinaryFrets()` returns the keys of the associated position in binary:
 * 0: not pressed key
 * 1: pressed key
+
+The `Position` class encapsulates the concept of a musical position, providing methods to access and manipulate the note, frets, and associated numerical identifier. The class also offers functionality to convert the frets into a binary format and print detailed information about the position.
+
 ### Thrills of note
 This class associates the note to its relative trill and memorize the information relatives to the correspondent trill.
 
