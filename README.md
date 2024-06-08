@@ -1,7 +1,7 @@
 # THRILLIZY
 
 ## A Graphic Interface To Learn How To Play The Transverse Flute
-<img src="staffImages/Thrillizy.png"  width="700" height="500">
+
 ![Alt text](staffImages/Thrillizy.png)
 
 
