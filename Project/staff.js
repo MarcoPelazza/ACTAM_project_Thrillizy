@@ -104,7 +104,6 @@ document.addEventListener("DOMContentLoaded", function() {
  
 
         if (bottonePremuto && notaAccidentale) {
-            console.log('nota accidentale: ' + notaAccidentale);
             let stringControl = notaMusicale[0];
             if(notaAccidentale === '♭'){
                 if (stringControl !='C' && stringControl != 'F'){
@@ -136,7 +135,6 @@ document.addEventListener("DOMContentLoaded", function() {
         
         //document.getElementById('notaVisualizzata').
         //textContent = 'Nota: ' + NotaDefinitiva;
-        console.log('Nota definitiva:  '+ NotaDefinitiva);
         window.startProcessing(NotaDefinitiva);
 
         // Aggiungi tagli addizionali permanenti
@@ -312,7 +310,6 @@ function conversion(notaMusicale){
     let conversion = notaMusicale
     let str = notaMusicale[0] + notaMusicale[1];
     if(notaMusicale.includes('♯')){
-        console.log(notaMusicale.includes('♯'));
         for (let i = 0; i < noteArray.length; i++){
             if(noteArray[i] === str){
                 conversion = noteArray[i-1] + 'b';
@@ -322,7 +319,6 @@ function conversion(notaMusicale){
         
     }
     if (notaMusicale.includes('♭')){
-        console.log(notaMusicale.includes('♭'));
         conversion = notaMusicale[0] + notaMusicale[1] + 'b';
     }
     

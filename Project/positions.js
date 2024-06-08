@@ -194,8 +194,6 @@ function initializePositions(notes, positions){
 //Funzione che a partire dalle posizioni e dal database dei trilli crea un array di oggetti thrils
 function initializeThrills(positions, thrillsDB) {
     let ts = [];
-    console.log('positions length: ' + positions.length)
-    console.log('thrillsDB length: ' + thrillsDB.length)
     if (positions.length !== thrillsDB.length) {
         alert('Incorrect number of elements in DB');
         return null;
@@ -845,7 +843,6 @@ var i = 0;
 for(let element of p){
     //element.print();
     noteNames[i] = element.getNote();
-    console.log(noteNames[i]);
     i++;
 }
 
@@ -878,11 +875,6 @@ function run(index, isthrill, sup1, sup2, inf1, inf2){
 
     
     if (isthrill === true){
-        //ViewBox.value = "the Thrill is ON..:)";
-        /*if(sup1 === false && sup2 === false && sup3 === false && sup4 === false){
-            alert('AO SCEGLI UN TRILLO')
-           sup1 = true;
-        }*/
         var inf1_exist=true;
         var inf2_exist=true;
         var sup1_exist=true;
@@ -896,11 +888,9 @@ function run(index, isthrill, sup1, sup2, inf1, inf2){
         const randomThrill = c[index];
         var q = randomThrill.getThrills();
         setting = null;
-        console.log(q);
 
         if(q["inf-thrill-note1"] === null ){
             inf1_exist=false;
-            //console.log('dfkjhdkjhdf'+ inf1_exist);
             deactivateButton(inf1_button, inf1_exist)}
         if(q["inf-thrill-note2"] === null){
             inf2_exist=false;
@@ -911,8 +901,7 @@ function run(index, isthrill, sup1, sup2, inf1, inf2){
         if(q["sup-thrill-note2"] === null){
             sup2_exist=false;
             deactivateButton(sup2_button, sup2_exist)}
-        
-            console.log("exist: "+inf1_exist + inf2_exist + sup1_exist + sup2_exist)
+
         var thrill_type_string = "";
 
         if (sup1 === true && sup1_exist){
@@ -947,19 +936,10 @@ function run(index, isthrill, sup1, sup2, inf1, inf2){
     }else{
         var randomNote = noteNames[index];
         setting = getPositionFromNote(randomNote, p);
-        
-        console.log("randomnote: " + randomNote);
-        console.log("vect: " + setting);
         thrillString = randomNote; 
         
         
     }
-    //console.log("Posizione " + randomNote + " è " + setKeys);
-    
-    //GIOBALDO
-    //pigiatasti
-
-    //ViewBox.value = "hai giannato un " + thrillString;
     
     names = ['key1','key14','key15','key2','key3','key4','key5','key6','key7','key8','key9','key10','key11','key12','key13'];
     
@@ -976,8 +956,7 @@ function run(index, isthrill, sup1, sup2, inf1, inf2){
     }
     }
     
-    
-    ///pigiatasti
+
 
     playAudio(thrillString)
 
@@ -988,7 +967,7 @@ function run(index, isthrill, sup1, sup2, inf1, inf2){
 }
 
 
-//console.log(ChosenNote);
+
 
 //playnote
 var Player = document.getElementById("AudioPlayer");
@@ -1009,22 +988,8 @@ function playAudio(thrillString){
 function playThisAudio(){
     Player.play();
 }
-///playnote
- //GIOBALDO
-
-
-
-/*function initialize(){
-   index = inputValue.value;
-   thrillString = notes[index];
-
-   run(index, isthrill, sup1, sup2, inf1, inf2);
-
-}*/
 
 function choose(thrill, type, typeString){
-    console.log("Napoli")
-    
 
     pressButton(sup1_button, false);
     pressButton(sup2_button, false);
@@ -1066,11 +1031,6 @@ function choose(thrill, type, typeString){
         
         }
     }
-    //console.log('Sup1: ' + sup1);
-    //console.log('Sup2: ' + sup2);
-    //console.log('Sup3: ' + inf1);
-    //console.log('Sup4: ' + inf2);
-    //console.log('Isthrill: ' + isthrill);
 
     if(isthrill){
         trillo_button.src='toggle_switch_on.png';
@@ -1087,12 +1047,10 @@ function choose(thrill, type, typeString){
 function startProcessing(NoteStringSelected = ''){
     for(i=0; i<notes.length; i++){
         if (notes[i]===NoteStringSelected){
-            console.log(notes.length);
             
             thrillString = notes[i];
             index = i;
             run(index, isthrill, sup1, sup2, inf1, inf2);
-            console.log('index '+index+' identified for note '+notes[index]);
             tunerStartStop('usa');
         }
         

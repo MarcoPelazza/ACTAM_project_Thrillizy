@@ -56,38 +56,12 @@ toggle = false;
 initAudioButton.src = 'toggle_switch_on.png';
 
 initAudioButton.addEventListener('click', tunerStartStop('tuner'));
-/*initAudioButton.addEventListener('click',function() {
-    if (!toggle) {
-        toggle = true;
-        console.log('Switch is ON');
-        initAudioButton.src = 'toggle_switch_on.jpg';
-
-        // Add your logic for when the switch is ON
-    } else {
-        toggle = false;
-        console.log('Switch is OFF');
-        initAudioButton.src = 'toggle_switch_off.jpg';
-        // Add your logic for when the switch is OFF
-    }
-}); */
-
-//const inputFrequency = document.getElementById('inputFrequency');
 const resultDisplay = document.getElementById('result');
-//let audioContext;
-
-
-
-
-//const trillo_button = document.getElementById("trillo")
-//initAudioButton.addEventListener('click', tunerStartStop); //click singolo o casino
-//initAudioButton.onclick();
-
 
 function initAudioContext() {
     changeScreen( true );
     audioContext = new (window.AudioContext || window.webkitAudioContext)();
         //Creazione contesto audio
-        console.log('inizializzazione audiocontenxt');
         
     //Input microfono
     navigator.mediaDevices.getUserMedia({audio : true})
@@ -121,14 +95,11 @@ function initAudioContext() {
         function getFrequency(){
             if(setTuner){
                 var frequency = 0;
-                console.log('palermo');
                 analyser.getFloatTimeDomainData(dataArray);
                 frequency = window.yin(dataArray, audioContext.sampleRate);
                 //var frequency = 175 + slider.value/10;
-                console.log(frequency);
 
                 var diff = handleNoteDifferences(targetNote, frequency, targetNoteIndex);
-                console.log(diff);
                 
                 
                 if(diff[0] <= 100){
@@ -153,7 +124,6 @@ function initAudioContext() {
                     }
                     tunerNote.style.backgroundColor = '#575454';
                 }
-                console.log('value=  ' + value + ' & diff =  ' + diff);
                 pointer.style.transform = "rotate(" + value + "deg)"; 
                 
 
@@ -180,7 +150,6 @@ function handleNoteDifferences(targetNote, frequency, targetNoteIndex){
     }else{
         noteBefore = ['B2',246.94];
     }
-    console.log('index :  ' + targetNoteIndex + ' sta per la nota: ' + frequencyToNoteDB[targetNoteIndex - (-1)]);
 
     if(targetNoteIndex - (-1) <= frequencyToNoteDB.length){
         noteAfter = frequencyToNoteDB[targetNoteIndex - (-1)];
@@ -191,24 +160,14 @@ function handleNoteDifferences(targetNote, frequency, targetNoteIndex){
     var centUp = (noteAfter[1] - targetNote[1])/100;
     var centDiff = 1010;
 
-    console.log('NoteBefore: ' + noteBefore);
-    console.log('NoteAfter: ' + noteAfter);
-
-    console.log('CentDown: ' + centDown);
-    console.log('centUp: ' + centUp);
-
     if(frequency < noteBefore[1]){
-        console.log('Napoli1');
         stateString = 'LOW'
     }else if(frequency > noteAfter[1]){
-        console.log('Napoli2');
         stateString =  'HIGH'
     }else if(frequency <= targetNote[1]){
-        console.log('Napoli3');
         centDiff = (targetNote[1] - frequency)/centDown;
         stateString = 'LOW'
     }else if (frequency > targetNote[1]){
-        console.log('Napoli4')
         centDiff = (frequency - targetNote[1])/centUp;
         stateString = 'HIGH'
     }
@@ -218,7 +177,6 @@ function handleNoteDifferences(targetNote, frequency, targetNoteIndex){
 //controllo attivazione tuner
 
 function tunerStartStop(call = ''){
-    console.log('startStop called by' + call);
     if(call==='usa'){
         if(!isthrill && tunerSwitch){
             if(mediaStream){
@@ -226,7 +184,6 @@ function tunerStartStop(call = ''){
                 stopAudioContext()}
             setTuner = true;
             initAudioContext();
-            console.log('tuner refresh by use');
         }
     }
     if(call==='tuner'){
@@ -237,14 +194,12 @@ function tunerStartStop(call = ''){
                 windowWidth = windowWidth_value;
                 setTuner = true;
                 initAudioContext();
-                console.log('attiva tuner');
             }else{
                 tunerSwitch=false;
                 initAudioButton.src='toggle_switch_off.png';
                 windowWidth = null;
                 setTuner = false;
                 stopAudioContext();
-                console.log('stop tuner');
             }
         }
     }
@@ -252,34 +207,28 @@ function tunerStartStop(call = ''){
         if(isthrill && tunerSwitch && mediaStream){
             windowWidth = null;
             setTuner = false;
-            stopAudioContext();
-            console.log('stop tuner');            
+            stopAudioContext();            
         }else if(!isthrill && tunerSwitch){
             windowWidth = windowWidth_value;
             setTuner = true;
             initAudioContext();
-            console.log('tuner start');
         }
     }
 }
 
 function stopAudioContext() {
     changeScreen( false );
-    console.log('stopAudioContext called');
     if (frequencyInterval) {
         clearInterval(frequencyInterval);
         frequencyInterval = null;
-        console.log('frequency interval = ' + frequencyInterval);
     }
     if (mediaStream) {
         mediaStream.getTracks().forEach(track => track.stop());
         mediaStream = null;
-        console.log('mediaStream = '+ mediaStream);
     }
     if (audioContext) {
         audioContext.close();
         audioContext = null;
-        console.log('audioContext = '+ audioContext);
     }
 }
 
