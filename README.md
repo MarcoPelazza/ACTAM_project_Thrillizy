@@ -12,7 +12,6 @@ This project is the result of a team work for the course _Advanced Coding Tools 
 
 ## How Can I Use It?
 
-METTERE SCREEN INTERFACCIA
 
 The graphic interface allows you to insert notes on the staff, giving you the possibility of choosing whether the note is altered or not and then the relative flute position will appear on the display. Moreover, it's also possible to listen the right sound of that note and verify if the note played by the flutist is correct or not, through a tuner connected to the microphone.
 
@@ -28,6 +27,8 @@ Don't worry, anything shown in the video will be explained below in this page.
 
 The very first step to follow to use this website is to have the flute in hand and a lot of good will. 
 
+On the right side, a reference diagram of the correct flute fingerings has been included.
+
 The staff which will appear on the display will allow you to select the note whose position you want to know/remember. The reference adopted for the staff is the treble clef without any key signature: for this reason is therefore possible to choose if the note is altered or not by pressing, before the note, one of the two buttons respectively corresponding to sharp `♯` or flat `♭`.
 
 It's also possibile to select notes below or above the staff, thanks to the ledger lines put as a reference while pointing with the mouse on the staff.
@@ -40,24 +41,43 @@ Obviously it will be only possible to choose the notes that are within the range
 
 Once you've selected the note on the staff, the relative position will appear on the flute picture put on the left side, in particular the keys to press will be seen in black.
 
+![Alt text](staffImages/tastineri.png)
+
 Note that the keys to press with the thumb of the left hand, which are not visible in the view in which the flute has been drawn, are positioned detached from the body of the flute, in correspondence of its real position.
+
+![Alt text](staffImages/tastidietro.png)
 
 And that's it!
 You're done!
 Now it's time to play!
 ### Can I listen to the right position sound?
 Yes. As you can see, there is a radio positioned in the top right and by pressing it you will hear the correct sound.
+
+![Alt text](staffImages/radio.png)
+
 ### How can I verify if the note I'm playing is correct?
 It's also possible to verify the correct execution of the note by using the `Tuner` box positioned in the bottom right corner. It requires the access to the microphone and then you can check also the tuning of the sound.
+
+![Alt text](staffImages/accordatore.png)
+
 ### What about trills?
 The trill is a musical ornament consisting of a rapid alternation between two adjacent notes, usually a semitone or tone apart. 
 
 On this website a beginner flute can also learn how to play them. 
 
 The steps to follow are very similar to those of the single note positions. After you've selected the note on the staff you can also select the type of trill to play. For each note it's possible to choose between four different trills in the `TRILLS` box: one for a semitone above (`SUP1`), one for a tone above (`SUP2`), one for a semitone below (`INF1`) and one for a tone below (`INF2`).
+
+![Alt text](staffImages/trilli.png)
+
 The flute picture will show the fixed keys to press in black as usual, while the key which will be moved for the execution of the trill will appear colored in red.
+
+![Alt text](staffImages/tastirossi.png)
+
 ### Can I see the trill positions for all the notes?
 Not all the notes allow the execution of trills, this depends on the range of the flute: for instance for the `C3`, which is the lowest note for a transverse flute, it's only possible to execute the two upper trills. For this reason, for the notes that are at the edges of the flute range, not all the trill buttons can be pressed.
+
+![Alt text](staffImages/trillibassi.png)
+
 ### Can I also check the correct execution of the trills?
 You can obviously listen to the correct execution of each trill, by pressing the radio as for single notes, but it's not possible to use the `Tuner` box, as it works only for one note at time, since you will be playing more than one note simultaneously.
 ### Is There Anything Else It Can Do?
