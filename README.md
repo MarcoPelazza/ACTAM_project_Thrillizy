@@ -300,9 +300,10 @@ I am extremely grateful to my team, who believed in this idea from the very begi
 
 Thank you for all the late-night study sessions, dinners, discussions, and suggestions for mutual improvement. It has been a pleasure working with you, and I hope this will be the first of many projects we develop together.
 ### Panettieri
-### Pelazzza
 
+### Pelazza
 I'm quite happy of the final work even if some modification and improvements are stil available. The thing that I appreciated the most was working with my collegues in an pleasent and funny atmosphere. Working in such an environment helped me a lot to enjoy the project.
+
 ---
 
 Project developed by:
