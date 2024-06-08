@@ -1,6 +1,8 @@
 # THRILLIZY
 
 ## A Graphic Interface To Learn How To Play The Transverse Flute
+<img src="staffImages/Thrillizy.png"  width="700" height="500">
+
 
 If you are starting to approach the world of the transverse flute, whether self-taught or not, you're at the right place. 
 May you be a self-taught musician and you want to learn the right positions of the instrument, or may you be an already trained flutist and often you've difficulty in remembering right positions, expecially for high octaves and trills, this website is designed for you.
