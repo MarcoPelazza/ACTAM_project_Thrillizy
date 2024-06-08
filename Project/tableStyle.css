@@ -1,7 +1,7 @@
 :root {
     --clr-dark: #0f172a;
     --clr-light: #c5b9b7;
-    --clr-accent: #89023e;
+    --clr-accent: #c8553d;
   }
   
   *,
@@ -29,7 +29,7 @@
   
   .item {
     padding: 0.0em;
-    background-color: #C8553D;
+    background-color: #ffd5c2;
     font-weight: 700;
     color: var(--clr-light);
     border: 10px solid var(--clr-accent);
