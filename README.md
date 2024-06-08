@@ -2,6 +2,7 @@
 
 ## A Graphic Interface To Learn How To Play The Transverse Flute
 <img src="staffImages/Thrillizy.png"  width="700" height="500">
+![Alt text](staffImages/Thrillizy.png)
 
 
 If you are starting to approach the world of the transverse flute, whether self-taught or not, you're at the right place. 
