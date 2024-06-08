@@ -302,7 +302,7 @@ Thank you for all the late-night study sessions, dinners, discussions, and sugge
 ### Panettieri
 
 ### Pelazza
-I'm quite happy of the final work even if some modification and improvements are stil available. The thing that I appreciated the most was working with my collegues in an pleasent and funny atmosphere. Working in such an environment helped me a lot to enjoy the project.
+I'm quite happy of the final work even if some modification and improvements are still available. The thing that I appreciated the most was working with my collegues in an pleasent and funny atmosphere. Working in such an environment helped me a lot to enjoy the project.
 
 ---
 
