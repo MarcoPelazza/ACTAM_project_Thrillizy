@@ -60,15 +60,13 @@ td{
 
 .Accordatore{
     position: relative;
-    top: 0%;
-    left: 0%;
+
     background-color: #291f1e;
     z-index: 1;
     border-radius: 20px;
     border-width: 5px;
     border-style: ridge;
-    border-color: #888;
-        
+    border-color: #888;  
 
 }
 #TunerNote{

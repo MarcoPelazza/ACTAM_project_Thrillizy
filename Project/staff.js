@@ -1,5 +1,6 @@
 var NotaDefinitiva;
 document.addEventListener("DOMContentLoaded", function() {
+    alert("Put your browser in full-screen mode to better enjoy the app (PRESS F11)")
     const svg = document.getElementById('pentagramma');
     let nota = null;
     let notaAccidentale = null;

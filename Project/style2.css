@@ -38,4 +38,19 @@
     flex-direction: column;
     grid-area: 1/4/-1/-1;
     justify-content: center;
+    top: 0px;
+
+}
+
+.istruzioni img{
+    margin-top: 75px
+}
+.radio img{
+    margin-top:20px;
+}
+.containerAccordatore h1{
+    margin-bottom: 130px;
+}
+.trilli h1{
+    margin-bottom: 130px;
 }

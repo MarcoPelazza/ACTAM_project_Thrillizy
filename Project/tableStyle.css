@@ -15,7 +15,7 @@
     padding: 0;
     line-height: 1.6;
     word-spacing: 1.4px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Helvetica', sans-serif;
     color: var(--clr-dark);
     background-color: var(--clr-light);
   }
@@ -28,8 +28,8 @@
   }
   
   .item {
-    padding: 0.5em;
-    background-color: var(--clr-light);
+    padding: 0.0em;
+    background-color: #C8553D;
     font-weight: 700;
     color: var(--clr-light);
     border: 10px solid var(--clr-accent);
