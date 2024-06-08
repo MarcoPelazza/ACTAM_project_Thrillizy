@@ -1101,14 +1101,14 @@ function startProcessing(NoteStringSelected = ''){
 
 function pressButton (button, val){
     if(val){
-        button.style.backgroundColor = '#89023E';
-        button.style.borderColor = '#89023E';
+        button.style.backgroundColor = '#F28F3B';
+        button.style.borderColor = '#F28F3B';
         button.style.borderStyle = 'inset';
         button.disabled = false;
     }else{
         console.log('devediventaregiallooo');
-        button.style.backgroundColor = '#19535F';
-        button.style.borderColor = '#19535F';
+        button.style.backgroundColor = '#c8553d';
+        button.style.borderColor = '#c8553d';
         button.style.borderStyle = 'outset';
         button.disabled = false;
     }
@@ -1116,8 +1116,8 @@ function pressButton (button, val){
 
 function deactivateButton(button, val){
     if(val){
-        button.style.backgroundColor = '#19535F';
-        button.style.borderColor = '#19535F';
+        button.style.backgroundColor = '##c8553d';
+        button.style.borderColor = '##c8553d';
         button.style.borderStyle = 'outset';
     }else{
         button.style.backgroundColor = '#888';

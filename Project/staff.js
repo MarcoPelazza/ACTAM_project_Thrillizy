@@ -75,11 +75,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function aggiungiNota(x, y) {
 
-        document.getElementById('bemolleButton').style.backgroundColor = '#19535F';
-        document.getElementById('bemolleButton').style.borderColor = '#19535F';
+        document.getElementById('bemolleButton').style.backgroundColor = '#c8553d';
+        document.getElementById('bemolleButton').style.borderColor = '#c8553d';
         document.getElementById('bemolleButton').style.borderStyle = 'outset';
-        document.getElementById('diesisButton').style.backgroundColor = '#19535F';
-        document.getElementById('diesisButton').style.borderColor = '#19535F';
+        document.getElementById('diesisButton').style.backgroundColor = '#c8553d';
+        document.getElementById('diesisButton').style.borderColor = '#c8553d';
         document.getElementById('diesisButton').style.borderStyle = 'outset';
 
         const simboloAccidentalePrecedente = svg.querySelector('.accidental');
@@ -232,8 +232,8 @@ document.addEventListener("DOMContentLoaded", function() {
     var diesisButton = document.getElementById('diesisButton').addEventListener('click', function() { 
         notaAccidentale = '♯';
         bottonePremuto = true;
-        document.getElementById('diesisButton').style.backgroundColor = '#89023E';
-        document.getElementById('diesisButton').style.borderColor = '#89023E';
+        document.getElementById('diesisButton').style.backgroundColor = '#F28F3B';
+        document.getElementById('diesisButton').style.borderColor = '#F28F3B';
         document.getElementById('diesisButton').style.borderStyle = 'inset';
 
     });
@@ -241,8 +241,8 @@ document.addEventListener("DOMContentLoaded", function() {
     var bemolleButton = document.getElementById('bemolleButton').addEventListener('click', function() {
         notaAccidentale = '♭';
         bottonePremuto = true;
-        document.getElementById('bemolleButton').style.backgroundColor = '#89023E';
-        document.getElementById('bemolleButton').style.borderColor = '#89023E';
+        document.getElementById('bemolleButton').style.backgroundColor = '#F28F3B';
+        document.getElementById('bemolleButton').style.borderColor = '#F28F3B';
         document.getElementById('bemolleButton').style.borderStyle = 'inset';
         
     });
