@@ -69,7 +69,7 @@ You can obviously listen to the correct execution of each trill, by pressing the
 <img src="staffImages/Flowchartsdef.png"  width="700" height="500">
 
 
-This project is composed of one HTML file (`index.html`), one CSS file (`style.css`) and four JavaScript files:
+This project is composed of one HTML file (`index.html`), one CSS file (`style.css`), four JavaScript files and some images:
 
 * `tuner.js`: is the management of the tuner.
 * `staff.js`: is the management of the staff.
@@ -103,7 +103,7 @@ The `ThrillsOfNote` class represents the thrills associated with a musical note,
 
 It's initialized by the constructor with the following attributes:
 * `this.position`: it's an object of the `Position` class of the corresponding note
-* `this.dict`: it's the trills `JSON` which is a kind of db that contains the information about the trills
+* `this.dict`: it's the trills `JSON` which is a kind of database that contains all the information about the trills
 
 The `getThrills()` method returns the complete trill.
 
@@ -114,20 +114,20 @@ The `positionAlterationManager()` method manages the eventual alterations of the
 ### Const: `position`
 This constant is an array of arrays which contains all the notes positions
 ### Const: `th`
-This is an object `JSON` which contains all the information about trills.
+This is an `JSON` which contains all the information about trills.
 ### Function: `run`
 
-The `run` function determines whether to generate a thrill or a single note based on the `isthrill` parameter. If it is true, it generates a thrill based on the specified superior (`sup1`, `sup2`) or inferior (`inf1`, `inf2`) flags. Otherwise, it generates a single note.
+The `run` function determines whether to display a thrill or a single note based on the `isthrill` parameter. If it is true, it find the correct thrill based on the specified superior (`sup1`, `sup2`) or inferior (`inf1`, `inf2`) flags. Otherwise, it find the single corresponding note.
 
 ![Alt text](staffImages/run.png)
 
 When the function `run(index,isThrill, sup1, sup2, inf1, inf2)` is runned there are two possible results:
-* `isThrill===True` returns the trill
-* `isThrill===False` returns the corresponding single note position
+* `isThrill===True` ==> returns the trill
+* `isThrill===False`==> returns the corresponding single note position
 
 ### Function: `choose`
 
-The `choose` function updates the state of thrill selection, toggles the thrill mode, and updates the background color of the related buttons. It then calls the `run` function to generate the selected note or thrill and starts or stops the tuner based on the current state.
+The `choose` function updates the state of thrill selection, toggles the thrill mode, and updates the background color of the related buttons. It then calls the `run` function to return the selected note or thrill and starts or stops the tuner based on the current state.
 
 ![Alt text](staffImages/choose.png)
  
@@ -143,7 +143,7 @@ It requests access to the user's microphone using `navigator.mediaDevices.getUse
 Upon successful permission, it initializes the microphone as a media stream source.
 
 A low-pass filter is created using `createBiquadFilter`, and its type is set to `lowpass`.
-The filter's frequency is set to 1000 Hz.
+The filter's frequency is set to 1000 Hz. This kind of lowpass is used to cancel some noise in the highest frequencies, the cutt-off frequency is placed at the end of the extesion of the flute.
 
 An analyser node is created using `createAnalyser`.
 Its FFT size is set to `8192` for frequency analysis, and minimum decibels are set to `-90`.
@@ -161,13 +161,13 @@ The `getFrequency` function is responsible for retrieving the frequency data fro
 The function first checks if setTuner is true before proceeding with frequency analysis.
 It retrieves frequency data from the microphone input using `analyser.getFloatTimeDomainData`.
 
-Frequency is calculated using the `window.yin` function with the frequency data and the sample rate of the audio context.
-
-The function calculates differences between the target note and the detected frequency using `handleNoteDifferences`.
+Frequency is calculated using the `window.yin()` function with the frequency data and the sample rate of the audio context. This function comes from thelibrary yin.js (https://github.com/adriano-di-giovanni/yinjs)
 
 
 
-`const frequencyToNoteDB` -> This array is a correspondence table between frequencies and musical notes. Each element of the array is a sub-array containing the name of the note and its corresponding frequency in hertz.
+
+
+`const frequencyToNoteDB` ==> This array is a correspondence table between frequencies and musical notes. Each element of the array is a sub-array containing the name of the note and its corresponding frequency in hertz.
 
 ### Function: `handleNoteDifferences`
 
@@ -178,7 +178,7 @@ The `handleNoteDifferences` function calculates the difference between the detec
 The function determines the notes before and after the target note based on its index in the `frequencyToNoteDB` array.
 Based on the comparison between the detected frequency and the neighboring notes, the function determines whether the detected frequency is lower or higher than the target note.
 
-The function returns an array containing the cent difference and the state string ('LOW' or 'HIGH').
+The function returns an array containing the cent difference and the state string ('LOW' or 'HIGH') that indicates if the detected frequency is higher or lower than the refereence one.
 
 
 ### Function: `stopAudioContext`
@@ -268,25 +268,6 @@ Buttons are all defined with the same style in `css` and have multiple states: `
 Concerning the aesthetic aspect we looked for a nice color palette on `coolors.co` and anyway the front end changed many times in order to accomplish the best space organization and aspect also "playing" with gradients and texture pictures.
 
 
-
-
-
-
-
-
-
-In the course of this project development, various layout models were implemented.
-The final version depicts the most intuitive layout, with the greatest visual impact.\
-The layout is the result of two files written in HTML and CSS (respectively `GUI.html` and `Style.css`).\
-Using HTML, it is possible to describe the layouts from an structural point of view, in terms of visual representation: the graphic parts, such as buttons and LEDs, were placed within `div` elements that could emphasise their own space within the interface.\
-In addition, each button was identified by a precise `id` (useful for positioning them within the webpage and for linking them to specific `onclick` functions present in the JavaScript file `Buttons_functions.js`), and by a `class`, where the latter differentiates the different categories of buttons (e.g. whether they are durations or alterations).\
-As regards of the grid and the keyboard, a `canvas` object has been used: the reason for this choice is dictated by its incredible flexibility and adaptability, which is specifically relevant for modifying the sequence directly from the grid and with the simple use of the mouse.\
-Furthermore, it can be seen how the use of colours makes the whole webpage more interesting, and with a marked harmonisation between `div` and `button` elements.\
-CSS provided the opportunity to work from a purely graphical point of view, with the choice of dimensions, contours, actual positioning and colours of the various elements.
-The focus was to have the most compact graphics possible, as well as a clear and intuitive interface, to be easily used during the composition of the sequence.\
-It is important to emphasise, for the reasons mentioned above, how some `label` elements were inserted precisely to make it easier to use and free of misunderstandings.
-
-
 ## Challenges Encountered
 
 ### Baldini
@@ -307,8 +288,7 @@ Another complicated part was the linking and communication to ensure that the no
 
 
 ### Pelazza
-
-## Credits
+In the project, I encountered many challenging situations. The implementation of managing the thrill positions and handling all their alterations was really difficult. Additionally, putting everything together into a working pipeline was quite a challenge.
 
 ### Baldini
 
@@ -320,8 +300,9 @@ I am extremely grateful to my team, who believed in this idea from the very begi
 
 Thank you for all the late-night study sessions, dinners, discussions, and suggestions for mutual improvement. It has been a pleasure working with you, and I hope this will be the first of many projects we develop together.
 ### Panettieri
-### Pelazza
+### Pelazzza
 
+I'm quite happy of the final work even if some modification and improvements are stil available. The thing that I appreciated the most was working with my collegues in an pleasent and funny atmosphere. Working in such an environment helped me a lot to enjoy the project.
 ---
 
 Project developed by:
