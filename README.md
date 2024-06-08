@@ -66,7 +66,7 @@ You can obviously listen to the correct execution of each trill, by pressing the
 ## How Does It Work?
 ### Block diagram
 
-
+<img src="staffImages/Flowchartsdef.png"  width="700" height="500">
 
 
 This project is composed of one HTML file (`index.html`), one CSS file (`style.css`) and four JavaScript files:
