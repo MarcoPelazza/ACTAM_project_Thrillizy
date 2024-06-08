@@ -27,6 +27,8 @@ Don't worry, anything shown in the video will be explained below in this page.
 
 The very first step to follow to use this website is to have the flute in hand and a lot of good will. 
 
+On the right side, a reference diagram of the correct flute fingerings has been included.
+
 The staff which will appear on the display will allow you to select the note whose position you want to know/remember. The reference adopted for the staff is the treble clef without any key signature: for this reason is therefore possible to choose if the note is altered or not by pressing, before the note, one of the two buttons respectively corresponding to sharp `♯` or flat `♭`.
 
 It's also possibile to select notes below or above the staff, thanks to the ledger lines put as a reference while pointing with the mouse on the staff.
