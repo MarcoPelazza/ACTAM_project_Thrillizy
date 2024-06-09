@@ -305,7 +305,7 @@ Concerning the aesthetic aspect we looked for a nice color palette on `coolors.c
 
 ### Baldini
 One of the difficulties I found in the developement was the correct managing of the tuner activation which needs to be refreshed by the selection of a new note, deactivated/activated by the selection of any of the thrills buttons or by its own on/off control, reinitializing averytime the audio-context in order to avoid errors in the frequency detection.
-Other challenge was for sure the realization of the svg keys of the flute, the moving meter of the tuner controlled by the frequency error detected, and the averall organization of the page that required a lot of cooperation by the whole team. We tried to make a front end fully responsive to the screen size but in the last days it was providing many issues due to the large number of elements contained in the page so we opted for a full screen visualization only in order to be tidier.
+Other challenge was for sure the realization of the svg keys of the flute, the moving meter of the tuner controlled by the frequency error detected, and the overall organization of the page that required a lot of cooperation by the whole team. We tried to make a front end fully responsive to the screen size but in the last days it was providing many issues due to the large number of elements contained in the page so we opted for a full screen visualization only in order to be tidier.
 
 ### Cagnetta
 
