@@ -17,11 +17,14 @@ This project is the result of a team work for the course _Advanced Coding Tools 
 
 The graphic interface allows you to insert notes on the staff, giving you the possibility of choosing whether the note is altered or not and then the relative flute position will appear on the display. Moreover, it's also possible to listen the right sound of that note and verify if the note played by the flutist is correct or not, through a tuner connected to the microphone.
 
+
+### URL webpage
+
+https://marcopelazza.github.io/ACTAM_project_Thrillizy/Project/index.html
+
 ### Video DEMO
 
-Here is a quick video tutorial:
-
-<video> <source src="videos/example.mp4" type="video/mp4"></video>
+In the repository you will find the video demonstration.
 
 
 Don't worry, anything shown in the video will be explained below in this page.
