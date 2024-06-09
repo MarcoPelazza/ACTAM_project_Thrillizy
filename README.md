@@ -20,8 +20,8 @@ The graphic interface allows you to insert notes on the staff, giving you the po
 ### Video DEMO
 
 Here is a quick video tutorial:
-METTERE VIDEO!
-<video src="./Video DEMO.mp4" controls title="Title"></video
+
+<video src="staffImages/Video DEMO.mp4" </video
 
 Don't worry, anything shown in the video will be explained below in this page.
 
