@@ -21,7 +21,7 @@ The graphic interface allows you to insert notes on the staff, giving you the po
 
 Here is a quick video tutorial:
 
-<video <source src="videos/example.mp4" type="video/mp4"></video
+<video> <source src="videos/example.mp4" type="video/mp4"></video>
 
 
 Don't worry, anything shown in the video will be explained below in this page.
