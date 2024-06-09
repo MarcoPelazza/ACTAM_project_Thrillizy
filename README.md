@@ -326,9 +326,9 @@ I am extremely grateful to my team, who believed in this idea from the very begi
 Thank you for all the late-night study sessions, dinners, discussions, and suggestions for mutual improvement. It has been a pleasure working with you, and I hope this will be the first of many projects we develop together.
 ### Panettieri
 
-In general, throughout my studies, I have done few group works to develop a project. Undoubtedly, this is the one in which I felt most comfortable. 
+In general, throughout my studies, I have done few group works to develop a project. Undoubtedly, this is the one in which I felt most comfortable.
 
-The goal was achieved, and it was done in pleasant work sessions, all thanks to my colleagues.
+It was certainly not easy; there were moments of difficulty, but all were overcome with a smile during pleasant work sessions, and in the end the goal was achieved, all thanks to my colleagues.
 
 
 ### Pelazza
