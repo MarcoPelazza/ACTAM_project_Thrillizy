@@ -307,7 +307,7 @@ Other challenge was for sure the realization of the svg keys of the flute, the m
 
 From my point of view, the most complicated task was encoding in binary code all the positions of the individual notes and for each note the various trills. The positions shown were chosen to provide all possible options for alternate fingerings for those learning to play the flute. 
 
-Another challenge was recording all the sounds and trills with perfectly tuned pitch, so that users would have a reliable reference to guide their practice.
+Another challenge was recording all the sounds and trills with perfectly tuned pitch, so that users would have a reliable reference to guide their practice, in fact not all the trills executions have been recordered, since we didn't have the appropriate equipment.
 
 ### Panettieri
 
