@@ -10,10 +10,7 @@ May you be a self-taught musician and you want to learn the right positions of t
 
 This project is the result of a team work for the course _Advanced Coding Tools and Methodologies_ of the M.S. Degree _Music and Acoustic Engineering_ at Politecnico di Milano.
 
-### Overall workflow
 
-the process starts by selecting a note from the staff in the interval C3-C6 for a total of 37 options. This selection occours in the staff.js file and it generates a string containing the name of the note selected of the type'note'+'octave'+'accidental' (e.g. 'E5b'). This string is then used by the startProcessing function in the position.js in order to produce the correct index of the selected note in the list of the whole notes. It now activate the run function (taking as input also the thrills states) which sets the correct keys combination on the flute by a 15-element vector and calls the playAudio function with the string identifier of the .wav file that will be loaded. This very same index is then used in the tuner.js by the initAudioContext function which starts the media stream and sets the reference frequency of the tuner which will be activated only if none of the thrills is selected (otherwise it will not be working).
-If any of the thrills is selected the isThrill variable is true and the 15 elements vector must be modified with the alterated position of the fixed keys (set to 1) and the moving keys (set to 2) which will be displayed in red.
 
 ## How Can I Use It?
 
@@ -27,6 +24,11 @@ METTERE VIDEO!
 <video src="./Video_demo.mp4" controls title="Title"></video
 
 Don't worry, anything shown in the video will be explained below in this page.
+
+### Overall workflow
+
+the process starts by selecting a note from the staff in the interval C3-C6 for a total of 37 options. This selection occours in the staff.js file and it generates a string containing the name of the note selected of the type'note'+'octave'+'accidental' (e.g. 'E5b'). This string is then used by the startProcessing function in the position.js in order to produce the correct index of the selected note in the list of the whole notes. It now activate the run function (taking as input also the thrills states) which sets the correct keys combination on the flute by a 15-element vector and calls the playAudio function with the string identifier of the .wav file that will be loaded. This very same index is then used in the tuner.js by the initAudioContext function which starts the media stream and sets the reference frequency of the tuner which will be activated only if none of the thrills is selected (otherwise it will not be working).
+If any of the thrills is selected the isThrill variable is true and the 15 elements vector must be modified with the alterated position of the fixed keys (set to 1) and the moving keys (set to 2) which will be displayed in red.
 
 ### Choosing the note 
 
