@@ -10,6 +10,11 @@ May you be a self-taught musician and you want to learn the right positions of t
 
 This project is the result of a team work for the course _Advanced Coding Tools and Methodologies_ of the M.S. Degree _Music and Acoustic Engineering_ at Politecnico di Milano.
 
+### Overall workflow
+
+the process starts by selecting a note from the staff in the interval C3-C6 for a total of 37 options. This selection occours in the staff.js file and it generates a string containing the name of the note selected of the type'note'+'octave'+'accidental' (e.g. 'E5b'). This string is then used by the startProcessing function in the position.js in order to produce the correct index of the selected note in the list of the whole notes. It now activate the run function (taking as input also the thrills states) which sets the correct keys combination on the flute by a 15-element vector and calls the playAudio function with the string identifier of the .wav file that will be loaded. This very same index is then used in the tuner.js by the initAudioContext function which starts the media stream and sets the reference frequency of the tuner which will be activated only if none of the thrills is selected (otherwise it will not be working).
+If any of the thrills is selected the isThrill variable is true and the 15 elements vector must be modified with the alterated position of the fixed keys (set to 1) and the moving keys (set to 2) which will be displayed in red.
+
 ## How Can I Use It?
 
 
@@ -294,8 +299,8 @@ Concerning the aesthetic aspect we looked for a nice color palette on `coolors.c
 ## Challenges Encountered
 
 ### Baldini
-
-
+One of the difficulties I found in the developement was the correct managing of the tuner activation which needs to be refreshed by the selection of a new note, deactivated/activated by the selection of any of the thrills buttons or by its own on/off control, reinitializing averytime the audio-context in order to avoid errors in the frequency detection.
+Other challenge was for sure the realization of the svg keys of the flute, the moving meter of the tuner controlled by the frequency error detected, and the averall organization of the page that required a lot of cooperation by the whole team. We tried to make a front end fully responsive to the screen size but in the last days it was providing many issues due to the large number of elements contained in the page so we opted for a full screen visualization only in order to be tidier.
 
 ### Cagnetta
 
@@ -316,6 +321,8 @@ In the project, I encountered many challenging situations. The implementation of
 ## Credits
 
 ### Baldini
+I have to say thanks to the whole team for the dedication given to this project, it's been enriching for the skills we could develop together during our long-lasting meetings, fixing problems, discussing subsequent improvement step by stem has let any of us a foundamental brick of this work which is even just for this a really satisfying result.
+
 
 ### Cagnetta
 
