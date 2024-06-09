@@ -313,6 +313,8 @@ Another complicated part was the linking and communication to ensure that the no
 ### Pelazza
 In the project, I encountered many challenging situations. The implementation of managing the thrill positions and handling all their alterations was really difficult. Additionally, putting everything together into a working pipeline was quite a challenge.
 
+## Credits
+
 ### Baldini
 
 ### Cagnetta
@@ -323,6 +325,8 @@ I am extremely grateful to my team, who believed in this idea from the very begi
 
 Thank you for all the late-night study sessions, dinners, discussions, and suggestions for mutual improvement. It has been a pleasure working with you, and I hope this will be the first of many projects we develop together.
 ### Panettieri
+
+
 
 ### Pelazza
 I'm quite happy of the final work even if some modification and improvements are still available. The thing that I appreciated the most was working with my collegues in an pleasent and funny atmosphere. Working in such an environment helped me a lot to enjoy the project.
